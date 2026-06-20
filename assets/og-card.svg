@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs><radialGradient id="g" cx="50%" cy="0%" r="70%"><stop offset="0%" stop-color="#F2B441" stop-opacity="0.18"/><stop offset="60%" stop-color="#0B0F14" stop-opacity="0"/></radialGradient></defs>
   <rect width="1200" height="630" fill="#0B0F14"/><rect width="1200" height="630" fill="url(#g)"/>
-  <g transform="translate(90,140)"><polygon points="60,5 110,33 110,88 60,116 10,88 10,33" fill="#F2B441"/>
+  <g transform="translate(90,130)"><polygon points="60,5 110,33 110,88 60,116 10,88 10,33" fill="#F2B441"/>
     <rect x="34" y="40" width="52" height="42" rx="6" fill="#0B0F14"/>
     <line x1="34" y1="54" x2="86" y2="54" stroke="#F2B441" stroke-width="6"/><line x1="34" y1="68" x2="86" y2="68" stroke="#F2B441" stroke-width="6"/></g>
   <text x="240" y="215" font-family="sans-serif" font-size="68" font-weight="800" fill="#E8EEF5">Diabetic<tspan fill="#F2B441">Datasets</tspan></text>
-  <text x="92" y="345" font-family="sans-serif" font-size="50" font-weight="800" fill="#E8EEF5">1,000,000+ honey datasets.</text>
-  <text x="92" y="408" font-family="sans-serif" font-size="50" font-weight="800" fill="#2FB67A">Free for builders.</text>
-  <text x="92" y="485" font-family="sans-serif" font-size="30" fill="#9fb1c2">Open · no charge · no strings · crystal-clear (schema, samples, hash)</text>
-  <text x="92" y="545" font-family="sans-serif" font-size="26" fill="#5ab0ff">diabeticdatasets.com</text>
+  <text x="92" y="335" font-family="sans-serif" font-size="48" font-weight="800" fill="#E8EEF5">Every dataset ships with a title deed.</text>
+  <text x="92" y="398" font-family="sans-serif" font-size="48" font-weight="800" fill="#2FB67A">Free for builders.</text>
+  <text x="92" y="478" font-family="sans-serif" font-size="29" fill="#9fb1c2">3.3M+ deed-backed pairs · medical &amp; oncology · tribunal-verified · Merkle+Hedera</text>
+  <text x="92" y="540" font-family="sans-serif" font-size="26" fill="#5ab0ff">diabeticdatasets.com</text>
 </svg>

@@ -1,17 +1,27 @@
 {
   "platform": "DiabeticDatasets",
-  "tagline": "Open diabetic datasets, donated free for builders.",
+  "tagline": "Deed-backed diabetic & medical datasets. Free for builders.",
   "generated": "2026-06-20",
   "donated_by": "Swarm & Bee \u2192 OpenDiabetic",
+  "deed_system": {
+    "system": "Swarm & Bee Title Deed v1.0",
+    "writer_model": "gemma-4-31B-it-swarmgrant",
+    "tribunal": "two-judge tribunal (scored reasoning)",
+    "anchor": "Merkle root + Hedera (topic 0.0.10291838)"
+  },
   "license": "OpenDiabetic Open Data \u2014 free, no charge, no strings",
-  "total_donated": "1,000,000+ honey datasets",
+  "scale": {
+    "packages": 99,
+    "pairs": "3,355,906",
+    "deed_backed": true
+  },
   "datasets": [
     {
       "slug": "diabetic-foot-care-qa",
       "name": "Diabetic Foot-Care Q&A",
-      "tier": "honey",
       "category": "Foot care",
-      "description": "Instruction\u2013response pairs teaching diabetic foot-care habits, warning signs, and appointment prep. Education only, never diagnosis.",
+      "description": "Instruction\u2013response pairs teaching diabetic foot-care habits, warning signs, and visit prep. Education only.",
+      "tier": "honey",
       "format": "jsonl",
       "rows": 15,
       "size": "4.8 KB",
@@ -36,17 +46,19 @@
           "response": "Look at the top, bottom, sides, and between every toe for cuts, cracks, blisters, redness, swelling, color changes, or drainage. Use a mirror or ask for help if you cannot see the bottoms. Note anything new and check both feet every day."
         }
       ],
+      "provenance": "OpenDiabetic original \u00b7 education",
+      "deed_backed": false,
       "license": "OpenDiabetic Open Data \u2014 free, no charge",
       "status": "available",
       "sample_download": "data/diabetic-foot-care-qa-sample.jsonl",
-      "note": "Downloadable sample. Full curated set importing."
+      "flagship": true
     },
     {
       "slug": "insulin-storage-handling",
       "name": "Insulin Storage & Handling Q&A",
-      "tier": "honey",
       "category": "Medication",
-      "description": "How to store, transport, inspect, and dispose of insulin safely. Practical, product-agnostic education.",
+      "description": "Storing, transporting, inspecting, and disposing of insulin safely. Product-agnostic education.",
+      "tier": "honey",
       "format": "jsonl",
       "rows": 13,
       "size": "4.0 KB",
@@ -71,17 +83,19 @@
           "response": "Most in-use insulin can be kept at controlled room temperature (often up to about 86\u00b0F / 30\u00b0C) for a limited number of days that varies by product \u2014 commonly 10 to 56 days. Check your product's label or leaflet for the exact in-use limit and discard after that period."
         }
       ],
+      "provenance": "OpenDiabetic original \u00b7 education",
+      "deed_backed": false,
       "license": "OpenDiabetic Open Data \u2014 free, no charge",
       "status": "available",
       "sample_download": "data/insulin-storage-handling-sample.jsonl",
-      "note": "Downloadable sample. Full curated set importing."
+      "flagship": false
     },
     {
       "slug": "diabetic-plate-nutrition",
       "name": "Diabetic Plate & Nutrition Q&A",
-      "tier": "honey",
       "category": "Nutrition",
-      "description": "The plate method, carb counting, fiber, drinks, and budget-friendly balanced meals for blood-sugar management.",
+      "description": "The plate method, carb counting, fiber, drinks, and budget-friendly balanced meals.",
+      "tier": "honey",
       "format": "jsonl",
       "rows": 12,
       "size": "3.8 KB",
@@ -106,258 +120,324 @@
           "response": "Non-starchy vegetables include leafy greens, broccoli, cauliflower, peppers, green beans, cucumbers, tomatoes, carrots, and asparagus. They are high in fiber and low in carbohydrate, so they fill the plate without raising blood sugar much."
         }
       ],
+      "provenance": "OpenDiabetic original \u00b7 education",
+      "deed_backed": false,
       "license": "OpenDiabetic Open Data \u2014 free, no charge",
       "status": "available",
       "sample_download": "data/diabetic-plate-nutrition-sample.jsonl",
-      "note": "Downloadable sample. Full curated set importing."
+      "flagship": false
     },
     {
-      "slug": "glucose-monitoring-qa",
-      "name": "Glucose Monitoring Basics Q&A",
-      "tier": "jelly",
+      "slug": "medical-domain-expert-qa",
+      "name": "Medical Domain-Expert QA",
+      "category": "Medical \u00b7 multi-specialty",
+      "description": "Deed-backed domain-expert instruction set: medical domain-expert qa. two-judge tribunal (scored reasoning), Merkle root + Hedera (topic 0.0.10291838).",
+      "tier": "platinum",
+      "format": "jsonl (messages)",
+      "rows": 417136,
+      "size": "\u2014",
+      "sha256": "(per-row deed-anchored)",
+      "schema": [
+        {
+          "field": "messages",
+          "type": "string"
+        },
+        {
+          "field": "metadata",
+          "type": "string"
+        }
+      ],
+      "samples": [
+        {
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a board-certified neuroradiologist. Interpret imaging findings systematically by anatomical level."
+            },
+            {
+              "role": "user",
+              "content": "Describe a systematic approach to reading a non-contrast head CT for suspected acute stroke."
+            },
+            {
+              "role": "assistant",
+              "content": "(deed-backed domain-expert response \u2014 preview; full set releasing)"
+            }
+          ],
+          "metadata": {
+            "domain": "medical",
+            "specialty": "neuroradiology",
+            "source_tier": "platinum"
+          }
+        }
+      ],
+      "provenance": "Generated by gemma-4-31B-it-swarmgrant \u00b7 two-judge tribunal (scored reasoning) \u00b7 Merkle root + Hedera (topic 0.0.10291838)",
+      "deed_backed": true,
+      "deed": {
+        "system": "Swarm & Bee Title Deed v1.0",
+        "writer_model": "gemma-4-31B-it-swarmgrant",
+        "tribunal": "two-judge tribunal (scored reasoning)",
+        "anchor": "Merkle root + Hedera (topic 0.0.10291838)"
+      },
+      "license": "Swarm deed-backed \u00b7 clearance in progress",
+      "status": "deed-verified",
+      "sample_download": null,
+      "flagship": true
+    },
+    {
+      "slug": "oncology-domain-qa",
+      "name": "Oncology Domain-Expert QA \u2014 Full Drop",
+      "category": "Oncology",
+      "description": "Deed-backed domain-expert instruction set: oncology domain-expert qa \u2014 full drop. two-judge tribunal (scored reasoning), Merkle root + Hedera (topic 0.0.10291838).",
+      "tier": "platinum",
+      "format": "jsonl (messages)",
+      "rows": 120000,
+      "size": "\u2014",
+      "sha256": "(per-row deed-anchored)",
+      "schema": [
+        {
+          "field": "messages",
+          "type": "string"
+        },
+        {
+          "field": "metadata",
+          "type": "string"
+        }
+      ],
+      "samples": [
+        {
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a board-certified medical oncologist. Reason through staging and treatment planning systematically."
+            },
+            {
+              "role": "user",
+              "content": "Outline the general framework for discussing TNM staging with a newly diagnosed patient."
+            },
+            {
+              "role": "assistant",
+              "content": "(deed-backed domain-expert response \u2014 preview; full set releasing)"
+            }
+          ],
+          "metadata": {
+            "domain": "medical",
+            "specialty": "oncology",
+            "source_tier": "platinum"
+          }
+        }
+      ],
+      "provenance": "Generated by gemma-4-31B-it-swarmgrant \u00b7 two-judge tribunal (scored reasoning) \u00b7 Merkle root + Hedera (topic 0.0.10291838)",
+      "deed_backed": true,
+      "deed": {
+        "system": "Swarm & Bee Title Deed v1.0",
+        "writer_model": "gemma-4-31B-it-swarmgrant",
+        "tribunal": "two-judge tribunal (scored reasoning)",
+        "anchor": "Merkle root + Hedera (topic 0.0.10291838)"
+      },
+      "license": "Swarm deed-backed \u00b7 clearance in progress",
+      "status": "deed-verified",
+      "sample_download": null,
+      "flagship": true
+    },
+    {
+      "slug": "endocrinology-diabetes-qa",
+      "name": "Endocrinology & Diabetes QA",
+      "category": "Endocrinology",
+      "description": "Deed-backed domain-expert instruction set: endocrinology & diabetes qa. two-judge tribunal (scored reasoning), Merkle root + Hedera (topic 0.0.10291838).",
+      "tier": "platinum",
+      "format": "jsonl (messages)",
+      "rows": 38000,
+      "size": "\u2014",
+      "sha256": "(per-row deed-anchored)",
+      "schema": [
+        {
+          "field": "messages",
+          "type": "string"
+        },
+        {
+          "field": "metadata",
+          "type": "string"
+        }
+      ],
+      "samples": [
+        {
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a board-certified endocrinologist."
+            },
+            {
+              "role": "user",
+              "content": "Explain, in plain language, how the body regulates blood glucose."
+            },
+            {
+              "role": "assistant",
+              "content": "(deed-backed domain-expert response \u2014 preview; full set releasing)"
+            }
+          ],
+          "metadata": {
+            "domain": "medical",
+            "specialty": "endocrinology",
+            "source_tier": "platinum"
+          }
+        }
+      ],
+      "provenance": "Generated by gemma-4-31B-it-swarmgrant \u00b7 two-judge tribunal (scored reasoning) \u00b7 Merkle root + Hedera (topic 0.0.10291838)",
+      "deed_backed": true,
+      "deed": {
+        "system": "Swarm & Bee Title Deed v1.0",
+        "writer_model": "gemma-4-31B-it-swarmgrant",
+        "tribunal": "two-judge tribunal (scored reasoning)",
+        "anchor": "Merkle root + Hedera (topic 0.0.10291838)"
+      },
+      "license": "Swarm deed-backed \u00b7 clearance in progress",
+      "status": "deed-verified",
+      "sample_download": null,
+      "flagship": true
+    },
+    {
+      "slug": "cardiology-ecg-qa",
+      "name": "Cardiology & ECG Interpretation QA",
+      "category": "Cardiology",
+      "description": "Deed-backed domain-expert instruction set: cardiology & ecg interpretation qa. two-judge tribunal (scored reasoning), Merkle root + Hedera (topic 0.0.10291838).",
+      "tier": "platinum",
+      "format": "jsonl (messages)",
+      "rows": 41000,
+      "size": "\u2014",
+      "sha256": "(per-row deed-anchored)",
+      "schema": [
+        {
+          "field": "messages",
+          "type": "string"
+        },
+        {
+          "field": "metadata",
+          "type": "string"
+        }
+      ],
+      "samples": [
+        {
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a board-certified cardiologist."
+            },
+            {
+              "role": "user",
+              "content": "Walk through a structured approach to reading a 12-lead ECG."
+            },
+            {
+              "role": "assistant",
+              "content": "(deed-backed domain-expert response \u2014 preview; full set releasing)"
+            }
+          ],
+          "metadata": {
+            "domain": "medical",
+            "specialty": "cardiology",
+            "source_tier": "platinum"
+          }
+        }
+      ],
+      "provenance": "Generated by gemma-4-31B-it-swarmgrant \u00b7 two-judge tribunal (scored reasoning) \u00b7 Merkle root + Hedera (topic 0.0.10291838)",
+      "deed_backed": true,
+      "deed": {
+        "system": "Swarm & Bee Title Deed v1.0",
+        "writer_model": "gemma-4-31B-it-swarmgrant",
+        "tribunal": "two-judge tribunal (scored reasoning)",
+        "anchor": "Merkle root + Hedera (topic 0.0.10291838)"
+      },
+      "license": "Swarm deed-backed \u00b7 clearance in progress",
+      "status": "deed-verified",
+      "sample_download": null,
+      "flagship": false
+    },
+    {
+      "slug": "clinical-pharmacology-qa",
+      "name": "Clinical Pharmacology QA",
+      "category": "Pharmacology",
+      "description": "Deed-backed domain-expert instruction set: clinical pharmacology qa. two-judge tribunal (scored reasoning), Merkle root + Hedera (topic 0.0.10291838).",
+      "tier": "platinum",
+      "format": "jsonl (messages)",
+      "rows": 52000,
+      "size": "\u2014",
+      "sha256": "(per-row deed-anchored)",
+      "schema": [
+        {
+          "field": "messages",
+          "type": "string"
+        },
+        {
+          "field": "metadata",
+          "type": "string"
+        }
+      ],
+      "samples": [
+        {
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a clinical pharmacologist."
+            },
+            {
+              "role": "user",
+              "content": "Describe the general principles of drug dose adjustment in reduced kidney function."
+            },
+            {
+              "role": "assistant",
+              "content": "(deed-backed domain-expert response \u2014 preview; full set releasing)"
+            }
+          ],
+          "metadata": {
+            "domain": "medical",
+            "specialty": "pharmacology",
+            "source_tier": "platinum"
+          }
+        }
+      ],
+      "provenance": "Generated by gemma-4-31B-it-swarmgrant \u00b7 two-judge tribunal (scored reasoning) \u00b7 Merkle root + Hedera (topic 0.0.10291838)",
+      "deed_backed": true,
+      "deed": {
+        "system": "Swarm & Bee Title Deed v1.0",
+        "writer_model": "gemma-4-31B-it-swarmgrant",
+        "tribunal": "two-judge tribunal (scored reasoning)",
+        "anchor": "Merkle root + Hedera (topic 0.0.10291838)"
+      },
+      "license": "Swarm deed-backed \u00b7 clearance in progress",
+      "status": "deed-verified",
+      "sample_download": null,
+      "flagship": false
+    },
+    {
+      "slug": "diabetic-cgm-glycemic",
+      "name": "CGM / Glycemic Wearable (Dexcom)",
       "category": "Monitoring",
-      "description": "Curated instruction\u2013response pairs: glucose monitoring basics q&a. Education only.",
-      "format": "jsonl",
-      "rows": 9800,
-      "size": "\u2014",
-      "sha256": "(published on import)",
+      "description": "Real continuous-glucose-monitor + wearable signals (Dexcom, HR, food logs). Open research data.",
+      "tier": "research",
+      "format": "csv",
+      "rows": 0,
+      "size": "multi-GB",
+      "sha256": "(see source)",
       "schema": [
         {
-          "field": "instruction",
-          "type": "string"
+          "field": "timestamp",
+          "type": "datetime"
         },
         {
-          "field": "response",
-          "type": "string"
+          "field": "glucose_mg_dl",
+          "type": "number"
         }
       ],
       "samples": [
         {
-          "instruction": "What is a continuous glucose monitor (CGM)?",
-          "response": "A CGM is a small wearable sensor that checks glucose in the fluid under the skin every few minutes and sends readings to a phone or receiver, showing trends over time. It is general education; your care team sets your targets."
+          "note": "PhysioNet big-ideas-glycemic-wearable \u2014 ODC-By open license"
         }
       ],
-      "license": "OpenDiabetic Open Data \u2014 free, no charge",
-      "status": "importing",
-      "sample_download": null,
-      "note": "Crystal-clear preview. Full set importing \u2014 get notified."
-    },
-    {
-      "slug": "medication-adherence-qa",
-      "name": "Medication Adherence & Reminders Q&A",
-      "tier": "jelly",
-      "category": "Medication",
-      "description": "Curated instruction\u2013response pairs: medication adherence & reminders q&a. Education only.",
-      "format": "jsonl",
-      "rows": 7400,
-      "size": "\u2014",
-      "sha256": "(published on import)",
-      "schema": [
-        {
-          "field": "instruction",
-          "type": "string"
-        },
-        {
-          "field": "response",
-          "type": "string"
-        }
-      ],
-      "samples": [
-        {
-          "instruction": "What are simple ways to remember diabetes medications?",
-          "response": "Tie doses to daily anchors (meals, brushing teeth), use a pillbox or phone reminders, keep a current medication list, and refill before running out. Never change a dose without your clinician."
-        }
-      ],
-      "license": "OpenDiabetic Open Data \u2014 free, no charge",
-      "status": "importing",
-      "sample_download": null,
-      "note": "Crystal-clear preview. Full set importing \u2014 get notified."
-    },
-    {
-      "slug": "diabetic-meal-plans",
-      "name": "Diabetic Meal Plans & Recipes",
-      "tier": "jelly",
-      "category": "Nutrition",
-      "description": "Curated instruction\u2013response pairs: diabetic meal plans & recipes. Education only.",
-      "format": "jsonl",
-      "rows": 22000,
-      "size": "\u2014",
-      "sha256": "(published on import)",
-      "schema": [
-        {
-          "field": "instruction",
-          "type": "string"
-        },
-        {
-          "field": "response",
-          "type": "string"
-        }
-      ],
-      "samples": [
-        {
-          "instruction": "Give a balanced diabetes-friendly dinner idea.",
-          "response": "Baked salmon (lean protein), a large non-starchy vegetable medley filling half the plate, and a measured serving of quinoa, with water. It balances protein, fiber, and a controlled amount of carbohydrate."
-        }
-      ],
-      "license": "OpenDiabetic Open Data \u2014 free, no charge",
-      "status": "importing",
-      "sample_download": null,
-      "note": "Crystal-clear preview. Full set importing \u2014 get notified."
-    },
-    {
-      "slug": "doctor-visit-prep",
-      "name": "Doctor-Visit Question Prep",
-      "tier": "jelly",
-      "category": "Care navigation",
-      "description": "Curated instruction\u2013response pairs: doctor-visit question prep. Education only.",
-      "format": "jsonl",
-      "rows": 5200,
-      "size": "\u2014",
-      "sha256": "(published on import)",
-      "schema": [
-        {
-          "field": "instruction",
-          "type": "string"
-        },
-        {
-          "field": "response",
-          "type": "string"
-        }
-      ],
-      "samples": [
-        {
-          "instruction": "What questions should I prepare for a diabetes checkup?",
-          "response": "Ask about your target numbers (A1C, blood pressure), whether any medication is causing how you feel, foot and eye check timing, what should prompt a call versus the ER, and lower-cost options for supplies."
-        }
-      ],
-      "license": "OpenDiabetic Open Data \u2014 free, no charge",
-      "status": "importing",
-      "sample_download": null,
-      "note": "Crystal-clear preview. Full set importing \u2014 get notified."
-    },
-    {
-      "slug": "hypoglycemia-response",
-      "name": "Hypoglycemia Recognition & Response",
-      "tier": "jelly",
-      "category": "Safety",
-      "description": "Curated instruction\u2013response pairs: hypoglycemia recognition & response. Education only.",
-      "format": "jsonl",
-      "rows": 6100,
-      "size": "\u2014",
-      "sha256": "(published on import)",
-      "schema": [
-        {
-          "field": "instruction",
-          "type": "string"
-        },
-        {
-          "field": "response",
-          "type": "string"
-        }
-      ],
-      "samples": [
-        {
-          "instruction": "What are common signs of low blood sugar?",
-          "response": "Shakiness, sweating, hunger, confusion, irritability, fast heartbeat, and dizziness can signal hypoglycemia. The general 'rule of 15' (15g fast carbs, recheck in 15 minutes) is taught by care teams; learn your personal plan."
-        }
-      ],
-      "license": "OpenDiabetic Open Data \u2014 free, no charge",
-      "status": "importing",
-      "sample_download": null,
-      "note": "Crystal-clear preview. Full set importing \u2014 get notified."
-    },
-    {
-      "slug": "a1c-education",
-      "name": "A1C & Blood-Sugar Targets Education",
-      "tier": "jelly",
-      "category": "Education",
-      "description": "Curated instruction\u2013response pairs: a1c & blood-sugar targets education. Education only.",
-      "format": "jsonl",
-      "rows": 4800,
-      "size": "\u2014",
-      "sha256": "(published on import)",
-      "schema": [
-        {
-          "field": "instruction",
-          "type": "string"
-        },
-        {
-          "field": "response",
-          "type": "string"
-        }
-      ],
-      "samples": [
-        {
-          "instruction": "What does the A1C test measure?",
-          "response": "A1C estimates average blood glucose over roughly the past 2\u20133 months as a percentage. It complements day-to-day readings; your clinician sets the target that is right for you."
-        }
-      ],
-      "license": "OpenDiabetic Open Data \u2014 free, no charge",
-      "status": "importing",
-      "sample_download": null,
-      "note": "Crystal-clear preview. Full set importing \u2014 get notified."
-    },
-    {
-      "slug": "diabetic-eye-awareness",
-      "name": "Diabetic Eye-Health Awareness",
-      "tier": "jelly",
-      "category": "Complication awareness",
-      "description": "Curated instruction\u2013response pairs: diabetic eye-health awareness. Education only.",
-      "format": "jsonl",
-      "rows": 3900,
-      "size": "\u2014",
-      "sha256": "(published on import)",
-      "schema": [
-        {
-          "field": "instruction",
-          "type": "string"
-        },
-        {
-          "field": "response",
-          "type": "string"
-        }
-      ],
-      "samples": [
-        {
-          "instruction": "Why are regular eye exams important with diabetes?",
-          "response": "Diabetes can affect the small blood vessels in the retina, sometimes with no early symptoms. Regular dilated eye exams catch changes early when they are most treatable. Your eye doctor advises the schedule."
-        }
-      ],
-      "license": "OpenDiabetic Open Data \u2014 free, no charge",
-      "status": "importing",
-      "sample_download": null,
-      "note": "Crystal-clear preview. Full set importing \u2014 get notified."
-    },
-    {
-      "slug": "kidney-health-qa",
-      "name": "Kidney-Health Awareness Q&A",
-      "tier": "jelly",
-      "category": "Complication awareness",
-      "description": "Curated instruction\u2013response pairs: kidney-health awareness q&a. Education only.",
-      "format": "jsonl",
-      "rows": 4300,
-      "size": "\u2014",
-      "sha256": "(published on import)",
-      "schema": [
-        {
-          "field": "instruction",
-          "type": "string"
-        },
-        {
-          "field": "response",
-          "type": "string"
-        }
-      ],
-      "samples": [
-        {
-          "instruction": "How does diabetes relate to kidney health?",
-          "response": "Over time, high blood sugar and blood pressure can strain the kidneys' filtering vessels. Routine urine and blood tests track kidney health, and managing glucose and blood pressure helps protect it. Follow your care team's monitoring plan."
-        }
-      ],
-      "license": "OpenDiabetic Open Data \u2014 free, no charge",
-      "status": "importing",
-      "sample_download": null,
-      "note": "Crystal-clear preview. Full set importing \u2014 get notified."
+      "provenance": "PhysioNet \u00b7 ODC-By open license",
+      "deed_backed": false,
+      "license": "ODC-By (Open Data Commons Attribution)",
+      "status": "open-source",
+      "source_url": "https://physionet.org/content/big-ideas-glycemic-wearable/",
+      "flagship": true
     }
   ]
 }

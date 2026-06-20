@@ -21,7 +21,25 @@ a{color:var(--blue);text-decoration:none}.muted{color:var(--mut);font-size:.86re
 .hstats{display:flex;gap:30px;justify-content:center;flex-wrap:wrap;margin-top:30px}
 .hstats b{display:block;font-size:30px;color:var(--honey);font-weight:800}
 .hstats span{font-size:13px;color:var(--mut);text-transform:uppercase;letter-spacing:.5px}
-.controls{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin:36px 0 18px}
+.deedband{background:linear-gradient(180deg,#0e141b,var(--ink));border-top:1px solid var(--line);
+ border-bottom:1px solid var(--line);padding:46px 0;text-align:center}
+.deedband h2{font-size:clamp(24px,4vw,34px);font-weight:800;margin:0 0 6px}
+.proofs{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:24px;text-align:left}
+.proofs div{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--honey);
+ border-radius:12px;padding:16px}
+.proofs b{display:block;color:var(--honey);margin-bottom:6px}
+.proofs span{color:var(--mut);font-size:14px}
+.ctitle{font-size:clamp(22px,3.5vw,30px);font-weight:800;margin:46px 0 4px}
+.sub{color:var(--mut);max-width:680px}
+.deedtag{font-size:12px;font-weight:700;color:var(--honey);background:rgba(242,180,65,.12);
+ border:1px solid rgba(242,180,65,.3);border-radius:8px;padding:5px 9px;align-self:flex-start}
+.deedbox{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--honey);
+ border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:7px;font-size:14px}
+.deedbox b{color:var(--honey)}
+.badge.platinum{background:rgba(229,229,234,.12);color:#dfe6ee}
+.badge.research{background:rgba(90,176,255,.16);color:var(--blue)}
+.status.deed{color:var(--honey)}.status.open{color:var(--blue)}
+.controls{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin:24px 0 18px}
 #search{flex:1;min-width:220px;background:var(--panel);border:1px solid var(--line);color:var(--fg);
  border-radius:12px;padding:13px 16px;font-size:16px}
 #search:focus{outline:2px solid var(--honey);border-color:var(--honey)}
