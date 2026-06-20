@@ -172,7 +172,8 @@
         "url": "https://data.diabeticdatasets.com/medical/medical-domain-expert-qa-full.jsonl",
         "rows": 417136,
         "size": "1.06 GB",
-        "sha256": "7db7de18efffd2ba312f14db94e0f6ae0144e94cbdfaa32d99068da047dc7155"
+        "sha256": "7db7de18efffd2ba312f14db94e0f6ae0144e94cbdfaa32d99068da047dc7155",
+        "note": "branded download (data.diabeticdatasets.com) activating \u2014 cert provisioning"
       },
       "flagship": true
     },
@@ -235,7 +236,7 @@
       "full_rows": 1537,
       "flagship": true,
       "full_download": {
-        "url": "https://data.diabeticdatasets.com/medical/medical-oncology-full.jsonl",
+        "url": "https://opendiabetic-datasets.fly.storage.tigris.dev/medical/medical-oncology-full.jsonl",
         "rows": 1537,
         "size": "2.9 MB",
         "sha256": "0f320b6de5946b5a9b8ccb8a7cd3db451afdd9d86a443fb05b8abe23136647ad"
@@ -300,7 +301,7 @@
       "full_rows": 995,
       "flagship": true,
       "full_download": {
-        "url": "https://data.diabeticdatasets.com/medical/medical-endocrinology-full.jsonl",
+        "url": "https://opendiabetic-datasets.fly.storage.tigris.dev/medical/medical-endocrinology-full.jsonl",
         "rows": 995,
         "size": "1.8 MB",
         "sha256": "4e9de6b783e460044343eac4f251391b2eda346da7b2ac479d5157fb9e8eb256"
@@ -365,7 +366,7 @@
       "full_rows": 13166,
       "flagship": false,
       "full_download": {
-        "url": "https://data.diabeticdatasets.com/medical/medical-cardiology-full.jsonl",
+        "url": "https://opendiabetic-datasets.fly.storage.tigris.dev/medical/medical-cardiology-full.jsonl",
         "rows": 13166,
         "size": "80.5 MB",
         "sha256": "49a59489ad322854dc5ea6e14f4a999582cdce428c0c6b1c0788a38e1d9e4d99"
@@ -430,7 +431,7 @@
       "full_rows": 22085,
       "flagship": false,
       "full_download": {
-        "url": "https://data.diabeticdatasets.com/medical/medical-pharmacology-full.jsonl",
+        "url": "https://opendiabetic-datasets.fly.storage.tigris.dev/medical/medical-pharmacology-full.jsonl",
         "rows": 22388,
         "size": "52.6 MB",
         "sha256": "5c65e13e85e9ae3c713e2446c1f3e116211ad76c4b2a2aa7292bf7318acbcebb"
@@ -495,7 +496,7 @@
       "full_rows": 98986,
       "flagship": true,
       "full_download": {
-        "url": "https://data.diabeticdatasets.com/medical/medical-internal-medicine-full.jsonl",
+        "url": "https://opendiabetic-datasets.fly.storage.tigris.dev/medical/medical-internal-medicine-full.jsonl",
         "rows": 98986,
         "size": "252.3 MB",
         "sha256": "38fb516b1bf799ff0a22994614e3f69df8c7544e993698e297815e671d5c7cc3"
