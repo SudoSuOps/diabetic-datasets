@@ -90,3 +90,5 @@ pre.sample{background:#070a0e;border:1px solid var(--line);border-radius:10px;pa
 .foot{border-top:1px solid var(--line);margin-top:30px;padding:30px 20px;text-align:center}
 .foot p{margin:8px 0}.foot a{color:var(--fg)}
 @media(max-width:640px){.hstats{gap:20px}}
+
+.bee{font-size:1.4em;line-height:1;margin-right:.15em;vertical-align:-.05em}
