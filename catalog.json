@@ -1,0 +1,363 @@
+{
+  "platform": "DiabeticDatasets",
+  "tagline": "Open diabetic datasets, donated free for builders.",
+  "generated": "2026-06-20",
+  "donated_by": "Swarm & Bee \u2192 OpenDiabetic",
+  "license": "OpenDiabetic Open Data \u2014 free, no charge, no strings",
+  "total_donated": "1,000,000+ honey datasets",
+  "datasets": [
+    {
+      "slug": "diabetic-foot-care-qa",
+      "name": "Diabetic Foot-Care Q&A",
+      "tier": "honey",
+      "category": "Foot care",
+      "description": "Instruction\u2013response pairs teaching diabetic foot-care habits, warning signs, and appointment prep. Education only, never diagnosis.",
+      "format": "jsonl",
+      "rows": 15,
+      "size": "4.8 KB",
+      "sha256": "c37b50e876b337e347322520c3e154ff2cbf7daccf4b545065527941e4febb3e",
+      "schema": [
+        {
+          "field": "instruction",
+          "type": "string"
+        },
+        {
+          "field": "response",
+          "type": "string"
+        }
+      ],
+      "samples": [
+        {
+          "instruction": "Why is daily foot care so important for people with diabetes?",
+          "response": "Diabetes can reduce blood flow and dull the nerves in the feet, so a small cut, blister, or sore may go unnoticed and heal slowly. A quick daily check catches problems early, while they are still small and easy to treat. This is general education, not medical advice \u2014 confirm any concern with your clinician."
+        },
+        {
+          "instruction": "What does a basic daily diabetic foot check involve?",
+          "response": "Look at the top, bottom, sides, and between every toe for cuts, cracks, blisters, redness, swelling, color changes, or drainage. Use a mirror or ask for help if you cannot see the bottoms. Note anything new and check both feet every day."
+        }
+      ],
+      "license": "OpenDiabetic Open Data \u2014 free, no charge",
+      "status": "available",
+      "sample_download": "data/diabetic-foot-care-qa-sample.jsonl",
+      "note": "Downloadable sample. Full curated set importing."
+    },
+    {
+      "slug": "insulin-storage-handling",
+      "name": "Insulin Storage & Handling Q&A",
+      "tier": "honey",
+      "category": "Medication",
+      "description": "How to store, transport, inspect, and dispose of insulin safely. Practical, product-agnostic education.",
+      "format": "jsonl",
+      "rows": 13,
+      "size": "4.0 KB",
+      "sha256": "a02b95e42ae0fb63f64bce6fc977d08d18b1c1a3b4aec99d4906b0d7234afde8",
+      "schema": [
+        {
+          "field": "instruction",
+          "type": "string"
+        },
+        {
+          "field": "response",
+          "type": "string"
+        }
+      ],
+      "samples": [
+        {
+          "instruction": "How should unopened insulin be stored?",
+          "response": "Unopened insulin is generally kept in the refrigerator (about 36\u201346\u00b0F / 2\u20138\u00b0C) until its expiration date. Do not freeze it \u2014 insulin that has been frozen should not be used. This is general education; follow the storage instructions on your specific product and ask your pharmacist."
+        },
+        {
+          "instruction": "Can insulin be kept at room temperature once it is in use?",
+          "response": "Most in-use insulin can be kept at controlled room temperature (often up to about 86\u00b0F / 30\u00b0C) for a limited number of days that varies by product \u2014 commonly 10 to 56 days. Check your product's label or leaflet for the exact in-use limit and discard after that period."
+        }
+      ],
+      "license": "OpenDiabetic Open Data \u2014 free, no charge",
+      "status": "available",
+      "sample_download": "data/insulin-storage-handling-sample.jsonl",
+      "note": "Downloadable sample. Full curated set importing."
+    },
+    {
+      "slug": "diabetic-plate-nutrition",
+      "name": "Diabetic Plate & Nutrition Q&A",
+      "tier": "honey",
+      "category": "Nutrition",
+      "description": "The plate method, carb counting, fiber, drinks, and budget-friendly balanced meals for blood-sugar management.",
+      "format": "jsonl",
+      "rows": 12,
+      "size": "3.8 KB",
+      "sha256": "c8e7c026c6281556fbd57e6565ff2409e7d39b94a69df7a4ce60f559162c2923",
+      "schema": [
+        {
+          "field": "instruction",
+          "type": "string"
+        },
+        {
+          "field": "response",
+          "type": "string"
+        }
+      ],
+      "samples": [
+        {
+          "instruction": "What is the diabetes plate method?",
+          "response": "The plate method is a simple way to build a balanced meal: fill about half a 9-inch plate with non-starchy vegetables, one quarter with lean protein, and one quarter with carbohydrate foods, plus water or a no-calorie drink. It is general education \u2014 a dietitian can tailor it to you."
+        },
+        {
+          "instruction": "What are examples of non-starchy vegetables for half the plate?",
+          "response": "Non-starchy vegetables include leafy greens, broccoli, cauliflower, peppers, green beans, cucumbers, tomatoes, carrots, and asparagus. They are high in fiber and low in carbohydrate, so they fill the plate without raising blood sugar much."
+        }
+      ],
+      "license": "OpenDiabetic Open Data \u2014 free, no charge",
+      "status": "available",
+      "sample_download": "data/diabetic-plate-nutrition-sample.jsonl",
+      "note": "Downloadable sample. Full curated set importing."
+    },
+    {
+      "slug": "glucose-monitoring-qa",
+      "name": "Glucose Monitoring Basics Q&A",
+      "tier": "jelly",
+      "category": "Monitoring",
+      "description": "Curated instruction\u2013response pairs: glucose monitoring basics q&a. Education only.",
+      "format": "jsonl",
+      "rows": 9800,
+      "size": "\u2014",
+      "sha256": "(published on import)",
+      "schema": [
+        {
+          "field": "instruction",
+          "type": "string"
+        },
+        {
+          "field": "response",
+          "type": "string"
+        }
+      ],
+      "samples": [
+        {
+          "instruction": "What is a continuous glucose monitor (CGM)?",
+          "response": "A CGM is a small wearable sensor that checks glucose in the fluid under the skin every few minutes and sends readings to a phone or receiver, showing trends over time. It is general education; your care team sets your targets."
+        }
+      ],
+      "license": "OpenDiabetic Open Data \u2014 free, no charge",
+      "status": "importing",
+      "sample_download": null,
+      "note": "Crystal-clear preview. Full set importing \u2014 get notified."
+    },
+    {
+      "slug": "medication-adherence-qa",
+      "name": "Medication Adherence & Reminders Q&A",
+      "tier": "jelly",
+      "category": "Medication",
+      "description": "Curated instruction\u2013response pairs: medication adherence & reminders q&a. Education only.",
+      "format": "jsonl",
+      "rows": 7400,
+      "size": "\u2014",
+      "sha256": "(published on import)",
+      "schema": [
+        {
+          "field": "instruction",
+          "type": "string"
+        },
+        {
+          "field": "response",
+          "type": "string"
+        }
+      ],
+      "samples": [
+        {
+          "instruction": "What are simple ways to remember diabetes medications?",
+          "response": "Tie doses to daily anchors (meals, brushing teeth), use a pillbox or phone reminders, keep a current medication list, and refill before running out. Never change a dose without your clinician."
+        }
+      ],
+      "license": "OpenDiabetic Open Data \u2014 free, no charge",
+      "status": "importing",
+      "sample_download": null,
+      "note": "Crystal-clear preview. Full set importing \u2014 get notified."
+    },
+    {
+      "slug": "diabetic-meal-plans",
+      "name": "Diabetic Meal Plans & Recipes",
+      "tier": "jelly",
+      "category": "Nutrition",
+      "description": "Curated instruction\u2013response pairs: diabetic meal plans & recipes. Education only.",
+      "format": "jsonl",
+      "rows": 22000,
+      "size": "\u2014",
+      "sha256": "(published on import)",
+      "schema": [
+        {
+          "field": "instruction",
+          "type": "string"
+        },
+        {
+          "field": "response",
+          "type": "string"
+        }
+      ],
+      "samples": [
+        {
+          "instruction": "Give a balanced diabetes-friendly dinner idea.",
+          "response": "Baked salmon (lean protein), a large non-starchy vegetable medley filling half the plate, and a measured serving of quinoa, with water. It balances protein, fiber, and a controlled amount of carbohydrate."
+        }
+      ],
+      "license": "OpenDiabetic Open Data \u2014 free, no charge",
+      "status": "importing",
+      "sample_download": null,
+      "note": "Crystal-clear preview. Full set importing \u2014 get notified."
+    },
+    {
+      "slug": "doctor-visit-prep",
+      "name": "Doctor-Visit Question Prep",
+      "tier": "jelly",
+      "category": "Care navigation",
+      "description": "Curated instruction\u2013response pairs: doctor-visit question prep. Education only.",
+      "format": "jsonl",
+      "rows": 5200,
+      "size": "\u2014",
+      "sha256": "(published on import)",
+      "schema": [
+        {
+          "field": "instruction",
+          "type": "string"
+        },
+        {
+          "field": "response",
+          "type": "string"
+        }
+      ],
+      "samples": [
+        {
+          "instruction": "What questions should I prepare for a diabetes checkup?",
+          "response": "Ask about your target numbers (A1C, blood pressure), whether any medication is causing how you feel, foot and eye check timing, what should prompt a call versus the ER, and lower-cost options for supplies."
+        }
+      ],
+      "license": "OpenDiabetic Open Data \u2014 free, no charge",
+      "status": "importing",
+      "sample_download": null,
+      "note": "Crystal-clear preview. Full set importing \u2014 get notified."
+    },
+    {
+      "slug": "hypoglycemia-response",
+      "name": "Hypoglycemia Recognition & Response",
+      "tier": "jelly",
+      "category": "Safety",
+      "description": "Curated instruction\u2013response pairs: hypoglycemia recognition & response. Education only.",
+      "format": "jsonl",
+      "rows": 6100,
+      "size": "\u2014",
+      "sha256": "(published on import)",
+      "schema": [
+        {
+          "field": "instruction",
+          "type": "string"
+        },
+        {
+          "field": "response",
+          "type": "string"
+        }
+      ],
+      "samples": [
+        {
+          "instruction": "What are common signs of low blood sugar?",
+          "response": "Shakiness, sweating, hunger, confusion, irritability, fast heartbeat, and dizziness can signal hypoglycemia. The general 'rule of 15' (15g fast carbs, recheck in 15 minutes) is taught by care teams; learn your personal plan."
+        }
+      ],
+      "license": "OpenDiabetic Open Data \u2014 free, no charge",
+      "status": "importing",
+      "sample_download": null,
+      "note": "Crystal-clear preview. Full set importing \u2014 get notified."
+    },
+    {
+      "slug": "a1c-education",
+      "name": "A1C & Blood-Sugar Targets Education",
+      "tier": "jelly",
+      "category": "Education",
+      "description": "Curated instruction\u2013response pairs: a1c & blood-sugar targets education. Education only.",
+      "format": "jsonl",
+      "rows": 4800,
+      "size": "\u2014",
+      "sha256": "(published on import)",
+      "schema": [
+        {
+          "field": "instruction",
+          "type": "string"
+        },
+        {
+          "field": "response",
+          "type": "string"
+        }
+      ],
+      "samples": [
+        {
+          "instruction": "What does the A1C test measure?",
+          "response": "A1C estimates average blood glucose over roughly the past 2\u20133 months as a percentage. It complements day-to-day readings; your clinician sets the target that is right for you."
+        }
+      ],
+      "license": "OpenDiabetic Open Data \u2014 free, no charge",
+      "status": "importing",
+      "sample_download": null,
+      "note": "Crystal-clear preview. Full set importing \u2014 get notified."
+    },
+    {
+      "slug": "diabetic-eye-awareness",
+      "name": "Diabetic Eye-Health Awareness",
+      "tier": "jelly",
+      "category": "Complication awareness",
+      "description": "Curated instruction\u2013response pairs: diabetic eye-health awareness. Education only.",
+      "format": "jsonl",
+      "rows": 3900,
+      "size": "\u2014",
+      "sha256": "(published on import)",
+      "schema": [
+        {
+          "field": "instruction",
+          "type": "string"
+        },
+        {
+          "field": "response",
+          "type": "string"
+        }
+      ],
+      "samples": [
+        {
+          "instruction": "Why are regular eye exams important with diabetes?",
+          "response": "Diabetes can affect the small blood vessels in the retina, sometimes with no early symptoms. Regular dilated eye exams catch changes early when they are most treatable. Your eye doctor advises the schedule."
+        }
+      ],
+      "license": "OpenDiabetic Open Data \u2014 free, no charge",
+      "status": "importing",
+      "sample_download": null,
+      "note": "Crystal-clear preview. Full set importing \u2014 get notified."
+    },
+    {
+      "slug": "kidney-health-qa",
+      "name": "Kidney-Health Awareness Q&A",
+      "tier": "jelly",
+      "category": "Complication awareness",
+      "description": "Curated instruction\u2013response pairs: kidney-health awareness q&a. Education only.",
+      "format": "jsonl",
+      "rows": 4300,
+      "size": "\u2014",
+      "sha256": "(published on import)",
+      "schema": [
+        {
+          "field": "instruction",
+          "type": "string"
+        },
+        {
+          "field": "response",
+          "type": "string"
+        }
+      ],
+      "samples": [
+        {
+          "instruction": "How does diabetes relate to kidney health?",
+          "response": "Over time, high blood sugar and blood pressure can strain the kidneys' filtering vessels. Routine urine and blood tests track kidney health, and managing glucose and blood pressure helps protect it. Follow your care team's monitoring plan."
+        }
+      ],
+      "license": "OpenDiabetic Open Data \u2014 free, no charge",
+      "status": "importing",
+      "sample_download": null,
+      "note": "Crystal-clear preview. Full set importing \u2014 get notified."
+    }
+  ]
+}

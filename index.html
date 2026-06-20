@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DiabeticDatasets — open diabetic datasets, free for builders</title>
+<meta name="description" content="Over 1,000,000 honey datasets donated free to OpenDiabetic for developers and researchers. Open, no charge, no strings. Crystal-clear: see the schema, samples, size, and hash before you download.">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://diabeticdatasets.com/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0B0F14">
+<meta name="keywords" content="diabetic datasets, diabetes training data, open medical datasets, free AI datasets, diabetes machine learning, instruction tuning datasets, healthcare LLM data">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DiabeticDatasets">
+<meta property="og:url" content="https://diabeticdatasets.com/">
+<meta property="og:title" content="DiabeticDatasets — open diabetic datasets, free for builders">
+<meta property="og:description" content="1,000,000+ honey datasets donated free for devs. Crystal-clear: schema, samples, size, hash. No charge, no strings.">
+<meta property="og:image" content="https://diabeticdatasets.com/assets/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@opendiabetics">
+<meta name="twitter:title" content="DiabeticDatasets — open diabetic datasets, free for builders">
+<meta name="twitter:image" content="https://diabeticdatasets.com/assets/og.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "DataCatalog", "@id": "https://diabeticdatasets.com/#catalog", "name": "DiabeticDatasets",
+      "url": "https://diabeticdatasets.com",
+      "description": "Open diabetic instruction/education datasets donated free for developers and researchers.",
+      "license": "https://diabeticdatasets.com/#license",
+      "publisher": { "@type": "NGO", "name": "OpenDiabetic", "url": "https://opendiabetic.com" } },
+    { "@type": "WebSite", "url": "https://diabeticdatasets.com", "name": "DiabeticDatasets",
+      "inLanguage": "en-US", "publisher": { "@id": "https://diabeticdatasets.com/#catalog" } }
+  ]
+}
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="/">🐝 Diabetic<b>Datasets</b></a>
+  <nav><a href="https://opendiabetic.com">OpenDiabetic</a><a href="https://diabeticledger.com">Ledger</a>
+    <a class="btn" href="#catalog">Browse datasets</a></nav>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="kicker">Donated by Swarm &amp; Bee → OpenDiabetic</div>
+    <h1>Open diabetic datasets.<br><span>Free for builders.</span></h1>
+    <p class="lede">Over <b>1,000,000 honey datasets</b> — donated, open, <b>no charge, no strings</b>. Build
+      the models that help diabetics. And it's <b>crystal clear</b>: see the schema, the real sample rows,
+      the size, and the SHA-256 hash <em>before</em> you download. Verify what's in the file yourself.</p>
+    <div class="hstats">
+      <div><b id="hcount">—</b><span>datasets live</span></div>
+      <div><b>1M+</b><span>donated</span></div>
+      <div><b class="green">$0</b><span>forever</span></div>
+      <div><b>open</b><span>no strings</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="catalog" class="wrap">
+  <div class="controls">
+    <input id="search" type="search" placeholder="Search datasets — foot care, insulin, nutrition…" aria-label="Search datasets">
+    <div id="filters" class="filters"></div>
+  </div>
+  <div id="grid" class="grid"></div>
+</section>
+
+<div id="detail" class="detail hide" role="dialog" aria-modal="true">
+  <div class="sheet">
+    <button id="closeDetail" class="x" aria-label="Close">✕</button>
+    <div id="detailBody"></div>
+  </div>
+</div>
+
+<footer class="foot">
+  <p>🐝 DiabeticDatasets · the data layer of the hive · <a href="https://opendiabetic.com">OpenDiabetic</a> ·
+     <a href="https://localdiabetic.com">LocalDiabetic</a> · <a href="https://diabeticledger.com">DiabeticLedger</a></p>
+  <p class="muted">Open data, no PHI — education and synthetic instruction sets only, never patient records.
+     Not medical advice. License: free, no charge, no strings.</p>
+  <p class="muted">HQ · Jupiter, Florida · <a href="tel:+15615327120">561.532.7120</a> ·
+     <a href="https://x.com/opendiabetics">@opendiabetics</a> · <a href="mailto:build@opendiabetic.com">build@opendiabetic.com</a></p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

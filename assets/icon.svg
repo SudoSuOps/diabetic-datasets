@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="OpenDiabetic app icon">
+  <title>OpenDiabetic</title>
+  <rect width="512" height="512" rx="112" fill="#0B0F14"/>
+  <rect width="512" height="512" rx="112" fill="url(#g)"/>
+  <defs>
+    <radialGradient id="g" cx="50%" cy="18%" r="80%">
+      <stop offset="0%" stop-color="#F2B441" stop-opacity="0.18"/>
+      <stop offset="60%" stop-color="#0B0F14" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- safe area ~ 410px centered; mark hex r≈150 -->
+  <g transform="translate(256 256)">
+    <polygon points="0,-150 130,-75 130,75 0,150 -130,75 -130,-75" fill="#F2B441"/>
+    <rect x="-78" y="-58" width="156" height="120" rx="14" fill="#0B0F14"/>
+    <line x1="-78" y1="-20" x2="78" y2="-20" stroke="#F2B441" stroke-width="18"/>
+    <line x1="-78" y1="22"  x2="78" y2="22"  stroke="#F2B441" stroke-width="18"/>
+    <path d="M-96 -96 q-52 30 -14 86" fill="none" stroke="#3D9BE9" stroke-width="18" stroke-linecap="round"/>
+    <path d="M96 -96 q52 30 14 86"  fill="none" stroke="#3D9BE9" stroke-width="18" stroke-linecap="round"/>
+  </g>
+</svg>

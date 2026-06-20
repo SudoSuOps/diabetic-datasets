@@ -1,0 +1,8 @@
+{
+  "name": "diabetic-datasets",
+  "private": true,
+  "description": "DiabeticDatasets — open diabetic datasets platform (static, no deps)",
+  "scripts": {
+    "build": "rm -rf dist && mkdir -p dist && cp -r index.html style.css app.js catalog.json assets data robots.txt sitemap.xml llms.txt dist/ && echo built"
+  }
+}

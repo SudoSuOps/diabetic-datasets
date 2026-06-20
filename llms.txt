@@ -1,0 +1,23 @@
+# DiabeticDatasets
+
+> DiabeticDatasets is a free, open catalog of diabetic education and synthetic instruction datasets for developers and researchers building AI that helps people with diabetes. Over 1,000,000 curated "honey datasets" were donated by Swarm & Bee to the OpenDiabetic foundation and are offered at no charge, no strings. The platform is "crystal clear": for every dataset you can see the schema, real sample rows, the file size, and the SHA-256 hash before you download — so you can verify exactly what is in the file.
+
+## What's here
+- Instruction–response (JSONL) datasets across diabetic topics: foot care, insulin storage and handling, nutrition and the plate method, glucose monitoring, medication adherence, doctor-visit preparation, hypoglycemia response, A1C education, and complication awareness (eye, kidney).
+- Each dataset is education-only — it teaches general, non-diagnostic information and consistently advises confirming medical decisions with a clinician.
+
+## License & terms
+- Free. No charge, no strings. Open for builders to use, fine-tune, and research.
+- Donated by Swarm & Bee to OpenDiabetic. "Give people what they need, not what you have."
+
+## Important: no PHI
+- These are OPEN education and SYNTHETIC instruction datasets. They contain NO protected health information and NO patient records. This is consistent with the OpenDiabetic firewall: records never enter the compute or the open data layer.
+- Not medical advice. The datasets are training/education material, not clinical guidance.
+
+## Links
+- https://diabeticdatasets.com — browse, preview (schema + samples + hash), and download
+- https://opendiabetic.com — OpenDiabetic, the foundation/compute that hosts this
+- https://diabeticledger.com — the public, browser-verified giving ledger
+
+## Contact
+build@opendiabetic.com · HQ Jupiter, Florida, USA · X: https://x.com/opendiabetics
