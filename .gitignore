@@ -1,2 +1,4 @@
+*.env
+.tigris*
 dist/
 node_modules/

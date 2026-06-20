@@ -82,6 +82,8 @@ pre.sample{background:#070a0e;border:1px solid var(--line);border-radius:10px;pa
 .dlbar{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;align-items:center}
 .dlbtn{background:var(--green);color:#06210f;font-weight:800;padding:13px 22px;border-radius:12px}
 .dlbtn:hover{filter:brightness(1.08)}
+.dlbtn.full{background:var(--honey);color:#1a1205}
+.dlbtn.ghost{background:transparent;color:var(--green);border:1.5px solid var(--green)}
 .notify{background:var(--panel);border:1.5px solid var(--honey);color:var(--honey);font-weight:700;
  padding:13px 22px;border-radius:12px;display:inline-block}
 .lic{color:var(--mut);font-size:13px}

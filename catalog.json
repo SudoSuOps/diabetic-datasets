@@ -123,7 +123,7 @@
       "tier": "platinum",
       "format": "jsonl (messages)",
       "rows": 1537,
-      "size": "sample 13.8 KB \u00b7 1,537 pairs full",
+      "size": "sample shown \u00b7 2.9 MB full (1,537 rows)",
       "sha256": "46914f704ac3394be82b94f7392e30a4502f88755b1718eeec69a9ee3c81481c",
       "schema": [
         {
@@ -172,7 +172,13 @@
       "status": "available",
       "sample_download": "data/medical-oncology-sample.jsonl",
       "full_rows": 1537,
-      "flagship": true
+      "flagship": true,
+      "full_download": {
+        "url": "https://opendiabetic-datasets.fly.storage.tigris.dev/medical/medical-oncology-full.jsonl",
+        "rows": 1537,
+        "size": "2.9 MB",
+        "sha256": "0f320b6de5946b5a9b8ccb8a7cd3db451afdd9d86a443fb05b8abe23136647ad"
+      }
     },
     {
       "slug": "medical-endocrinology",
@@ -182,7 +188,7 @@
       "tier": "platinum",
       "format": "jsonl (messages)",
       "rows": 995,
-      "size": "sample 24.4 KB \u00b7 995 pairs full",
+      "size": "sample shown \u00b7 1.8 MB full (995 rows)",
       "sha256": "511901948ed501a15b65831251aee53575fdd57c4c16a1cf08eda8eedb0166fe",
       "schema": [
         {
@@ -231,7 +237,13 @@
       "status": "available",
       "sample_download": "data/medical-endocrinology-sample.jsonl",
       "full_rows": 995,
-      "flagship": true
+      "flagship": true,
+      "full_download": {
+        "url": "https://opendiabetic-datasets.fly.storage.tigris.dev/medical/medical-endocrinology-full.jsonl",
+        "rows": 995,
+        "size": "1.8 MB",
+        "sha256": "4e9de6b783e460044343eac4f251391b2eda346da7b2ac479d5157fb9e8eb256"
+      }
     },
     {
       "slug": "medical-cardiology",
@@ -241,7 +253,7 @@
       "tier": "platinum",
       "format": "jsonl (messages)",
       "rows": 13166,
-      "size": "sample 23.1 KB \u00b7 13,166 pairs full",
+      "size": "sample shown \u00b7 80.5 MB full (13,166 rows)",
       "sha256": "eb21a7812e3fd6f79db5cd2b573533c234122445307b1614126aabd64c2bc18a",
       "schema": [
         {
@@ -290,7 +302,13 @@
       "status": "available",
       "sample_download": "data/medical-cardiology-sample.jsonl",
       "full_rows": 13166,
-      "flagship": false
+      "flagship": false,
+      "full_download": {
+        "url": "https://opendiabetic-datasets.fly.storage.tigris.dev/medical/medical-cardiology-full.jsonl",
+        "rows": 13166,
+        "size": "80.5 MB",
+        "sha256": "49a59489ad322854dc5ea6e14f4a999582cdce428c0c6b1c0788a38e1d9e4d99"
+      }
     },
     {
       "slug": "medical-pharmacology",
@@ -300,7 +318,7 @@
       "tier": "platinum",
       "format": "jsonl (messages)",
       "rows": 22085,
-      "size": "sample 12.1 KB \u00b7 22,085 pairs full",
+      "size": "sample shown \u00b7 52.6 MB full (22,388 rows)",
       "sha256": "90c8ee342070926ea180a3fdfe83b67a29e544280dce54091b59444ea081ed89",
       "schema": [
         {
@@ -349,7 +367,13 @@
       "status": "available",
       "sample_download": "data/medical-pharmacology-sample.jsonl",
       "full_rows": 22085,
-      "flagship": false
+      "flagship": false,
+      "full_download": {
+        "url": "https://opendiabetic-datasets.fly.storage.tigris.dev/medical/medical-pharmacology-full.jsonl",
+        "rows": 22388,
+        "size": "52.6 MB",
+        "sha256": "5c65e13e85e9ae3c713e2446c1f3e116211ad76c4b2a2aa7292bf7318acbcebb"
+      }
     },
     {
       "slug": "medical-internal-medicine",
@@ -359,7 +383,7 @@
       "tier": "platinum",
       "format": "jsonl (messages)",
       "rows": 98986,
-      "size": "sample 29.8 KB \u00b7 98,986 pairs full",
+      "size": "sample shown \u00b7 252.3 MB full (98,986 rows)",
       "sha256": "d6913d50fc00f2efe89ae10f833badfb4f888fa70b820cdfd5b852323200f7d2",
       "schema": [
         {
@@ -408,7 +432,13 @@
       "status": "available",
       "sample_download": "data/medical-internal-medicine-sample.jsonl",
       "full_rows": 98986,
-      "flagship": true
+      "flagship": true,
+      "full_download": {
+        "url": "https://opendiabetic-datasets.fly.storage.tigris.dev/medical/medical-internal-medicine-full.jsonl",
+        "rows": 98986,
+        "size": "252.3 MB",
+        "sha256": "38fb516b1bf799ff0a22994614e3f69df8c7544e993698e297815e671d5c7cc3"
+      }
     },
     {
       "slug": "diabetic-cgm-glycemic",

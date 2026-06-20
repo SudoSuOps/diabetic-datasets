@@ -71,7 +71,12 @@ function openDetail(slug) {
       <div class="muted">Provenance you can verify. Every pair carries its own deed.</div>
     </div>` : `<h4>Provenance</h4><p class="muted">${esc(d.provenance)}</p>`;
   let action;
-  if (d.status === "available" && d.sample_download)
+  const full = d.full_download
+    ? `<a class="dlbtn full" href="${esc(d.full_download.url)}" download>⬇ Download full set · ${esc(d.full_download.size)} · ${num(d.full_download.rows)} rows</a>`
+    : "";
+  if (d.full_download && d.sample_download)
+    action = `${full}<a class="dlbtn ghost" href="${esc(d.sample_download)}" download>⬇ Sample (12 rows)</a><span class="lic">${esc(d.license)}</span>`;
+  else if (d.status === "available" && d.sample_download)
     action = `<a class="dlbtn" href="${esc(d.sample_download)}" download>⬇ Download sample (.jsonl)</a><span class="lic">${esc(d.license)}</span>`;
   else if (d.status === "open-source")
     action = `<a class="dlbtn" href="${esc(d.source_url)}" target="_blank" rel="noopener">↗ Get it from the source</a><span class="lic">${esc(d.license)} · re-hosted only with attribution</span>`;
