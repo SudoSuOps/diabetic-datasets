@@ -256,7 +256,7 @@
       "status": "available",
       "sample_download": "data/medical-oncology-sample.jsonl",
       "full_download": {
-        "url": "https://data.diabeticdatasets.com/medical/medical-domain-expert-qa-full.jsonl",
+        "url": "https://opendiabetic-datasets.fly.storage.tigris.dev/medical/medical-domain-expert-qa-full.jsonl",
         "rows": 417136,
         "size": "1.06 GB",
         "sha256": "7db7de18efffd2ba312f14db94e0f6ae0144e94cbdfaa32d99068da047dc7155",
