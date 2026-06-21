@@ -185,7 +185,14 @@ pre.sample{background:var(--ink-900);border:1px solid var(--line);border-radius:
 .donate-banner b{color:#7a5d12}
 .donate-banner a{color:#D99A2B;font-weight:700}
 .compute-callout{margin:16px auto 0;background:#0B0F14;color:#E8EEF5;border:1px solid #1F2A36;border-radius:12px;
-  padding:16px 20px;font-size:15px;line-height:1.6;display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+  padding:18px 20px;font-size:15px;line-height:1.6}
 .compute-callout b{color:#F2B441}
-.compute-callout .btn{margin-left:auto;background:#F2B441;color:#1a1205;font-weight:800;padding:10px 18px;border-radius:10px;white-space:nowrap}
+.compute-callout .cc-text{max-width:760px}
+.cc-fleet{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 8px}
+.cc-fleet .rig{background:#121922;border:1px solid #1F2A36;border-radius:10px;padding:10px 14px;min-width:150px}
+.cc-fleet .rig b{display:block;color:#E8EEF5;font-size:14px}
+.cc-fleet .rig span{display:block;color:#9fb1c2;font-size:12.5px;margin:2px 0}
+.cc-fleet .rig code{background:#0B0F14;color:#F2B441;font-size:11.5px;padding:1px 6px;border-radius:5px}
+.cc-note{color:#9fb1c2;font-size:13px;margin:6px 0 12px}
+.compute-callout .btn{display:inline-block;background:#F2B441;color:#1a1205;font-weight:800;padding:10px 18px;border-radius:10px;white-space:nowrap}
 .compute-callout .btn:hover{background:#D99A2B}
