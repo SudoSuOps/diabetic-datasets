@@ -24,9 +24,26 @@ function cardHtml(d) {
     </div></div>`;
 }
 
+function fmtK(n) {
+  if (n >= 1e6) return (n / 1e6).toFixed(1).replace(/\.0$/, "") + "M";
+  if (n >= 1e3) return Math.round(n / 1e3) + "K";
+  return String(n);
+}
+
+function setStats() {
+  const sets = CAT.length;
+  const rows = CAT.reduce((a, d) => a + (Number(d.rows) || 0), 0);
+  const deed = CAT.filter(d => d.deed_backed).length;
+  const set = (id, v) => { const el = $(id); if (el) el.textContent = v; };
+  set("#stat-sets", sets);
+  set("#stat-rows", rows ? fmtK(rows) + "+" : "—");
+  set("#stat-deed", deed);
+}
+
 async function load() {
   const c = await (await fetch("catalog.json", { cache: "no-store" })).json();
   CAT = c.datasets;
+  setStats();
   $("#flagship").innerHTML = CAT.filter(d => d.flagship).map(cardHtml).join("");
   const cats = ["all", ...new Set(CAT.map(d => d.category))];
   $("#filters").innerHTML = cats.map(x =>

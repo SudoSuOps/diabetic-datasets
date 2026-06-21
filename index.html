@@ -3,86 +3,144 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DiabeticDatasets — open diabetic datasets, free for builders</title>
-<meta name="description" content="Over 1,000,000 honey datasets donated free to OpenDiabetic for developers and researchers. Open, no charge, no strings. Crystal-clear: see the schema, samples, size, and hash before you download.">
+<title>DiabeticDatasets — open, deed-backed diabetic datasets, free for builders</title>
+<meta name="description" content="A free, open catalog of deed-backed diabetic and medical instruction datasets, donated by Swarm & Bee to OpenDiabetic. Crystal clear: see the schema, real sample rows, size, and SHA-256 hash before you download. No charge, no strings. No PHI — education and synthetic instruction sets only.">
 <link rel="icon" href="assets/bee.svg" type="image/svg+xml">
 <link rel="canonical" href="https://diabeticdatasets.com/">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#0B0F14">
-<meta name="keywords" content="diabetic datasets, diabetes training data, open medical datasets, free AI datasets, diabetes machine learning, instruction tuning datasets, healthcare LLM data">
+<meta name="author" content="OpenDiabetic Foundation">
+<meta name="keywords" content="diabetic datasets, diabetes training data, open medical datasets, free AI datasets, diabetes machine learning, instruction tuning datasets, healthcare LLM data, cited foot care data">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="DiabeticDatasets">
 <meta property="og:url" content="https://diabeticdatasets.com/">
-<meta property="og:title" content="DiabeticDatasets — open diabetic datasets, free for builders">
-<meta property="og:description" content="1,000,000+ honey datasets donated free for devs. Crystal-clear: schema, samples, size, hash. No charge, no strings.">
+<meta property="og:title" content="DiabeticDatasets — open, deed-backed diabetic datasets, free for builders">
+<meta property="og:description" content="Open, deed-backed diabetic & medical datasets, free for builders. Crystal clear: schema, real samples, size, SHA-256 before you download. No charge, no strings.">
 <meta property="og:image" content="https://diabeticdatasets.com/assets/og.png">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="DiabeticDatasets — open, deed-backed diabetic datasets, free for builders">
+<meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@opendiabetics">
-<meta name="twitter:title" content="DiabeticDatasets — open diabetic datasets, free for builders">
+<meta name="twitter:title" content="DiabeticDatasets — open, deed-backed diabetic datasets, free for builders">
+<meta name="twitter:description" content="Open, deed-backed diabetic & medical datasets, free for builders. Schema, real samples, size, SHA-256 before you download. No charge, no strings.">
 <meta name="twitter:image" content="https://diabeticdatasets.com/assets/og.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
-    { "@type": "DataCatalog", "@id": "https://diabeticdatasets.com/#catalog", "name": "DiabeticDatasets",
+    {
+      "@type": "DataCatalog",
+      "@id": "https://diabeticdatasets.com/#catalog",
+      "name": "DiabeticDatasets",
       "url": "https://diabeticdatasets.com",
-      "description": "Open diabetic instruction/education datasets donated free for developers and researchers.",
+      "description": "Open, deed-backed diabetic and medical instruction/education datasets donated free for developers and researchers. No PHI — education and synthetic instruction sets only.",
       "license": "https://diabeticdatasets.com/#license",
-      "publisher": { "@type": "NGO", "name": "OpenDiabetic", "url": "https://opendiabetic.com" } },
-    { "@type": "WebSite", "url": "https://diabeticdatasets.com", "name": "DiabeticDatasets",
-      "inLanguage": "en-US", "publisher": { "@id": "https://diabeticdatasets.com/#catalog" } }
+      "isAccessibleForFree": true,
+      "publisher": { "@id": "https://diabeticdatasets.com/#org" },
+      "sameAs": ["https://opendiabetic.com", "https://diabeticdocs.com", "https://diabeticnode.com", "https://diabeticmodels.com", "https://diabetictruth.org", "https://diabeticledger.com", "https://diabeticdonation.com", "https://localdiabetic.com", "https://x.com/opendiabetics", "https://github.com/SudoSuOps"]
+    },
+    {
+      "@type": ["NGO", "Organization"],
+      "@id": "https://diabeticdatasets.com/#org",
+      "name": "OpenDiabetic",
+      "alternateName": "OpenDiabetic Foundation",
+      "url": "https://opendiabetic.com",
+      "logo": "https://opendiabetic.com/assets/icon.svg",
+      "email": "build@opendiabetic.com",
+      "telephone": "+1-561-532-7120",
+      "address": { "@type": "PostalAddress", "addressLocality": "Jupiter", "addressRegion": "FL", "addressCountry": "US" },
+      "sameAs": ["https://x.com/opendiabetics", "https://opendiabetic.com", "https://diabeticdocs.com", "https://diabeticnode.com", "https://diabeticmodels.com", "https://diabetictruth.org", "https://diabeticledger.com", "https://diabeticdonation.com", "https://localdiabetic.com", "https://github.com/SudoSuOps"],
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Swarm and Bee LLC",
+        "legalName": "Swarm and Bee LLC",
+        "alternateName": "Swarm & Bee AI",
+        "address": { "@type": "PostalAddress", "addressRegion": "FL", "addressCountry": "US" },
+        "identifier": [
+          { "@type": "PropertyValue", "propertyID": "SAM UEI", "value": "L9EXVH9L9VU6" },
+          { "@type": "PropertyValue", "propertyID": "CAGE", "value": "20YM3" },
+          { "@type": "PropertyValue", "propertyID": "DUNS", "value": "138652395" }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://diabeticdatasets.com/#website",
+      "url": "https://diabeticdatasets.com",
+      "name": "DiabeticDatasets",
+      "inLanguage": "en-US",
+      "publisher": { "@id": "https://diabeticdatasets.com/#org" }
+    }
   ]
 }
 </script>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="top">
-  <a class="brand" href="/">🐝 Diabetic<b>Datasets</b></a>
-  <nav><a href="https://opendiabetic.com">OpenDiabetic</a><a href="https://diabeticledger.com">Ledger</a>
-    <a class="btn" href="#catalog">Browse datasets</a></nav>
+
+<header class="nav">
+  <a class="brand" href="/"><span class="bee" aria-hidden="true">🐝</span><span>Diabetic<b>Datasets</b></span></a>
+  <nav>
+    <a href="#deed">The deed</a>
+    <a href="#catalog">Catalog</a>
+    <a href="https://opendiabetic.com">OpenDiabetic</a>
+    <a class="btn ghost" href="https://diabeticledger.com">Verify the ledger →</a>
+  </nav>
 </header>
 
 <section class="hero">
   <div class="wrap">
-    <div class="kicker">Donated by Swarm &amp; Bee → OpenDiabetic</div>
-    <h1>Deed-backed diabetic &amp; medical datasets.<br><span>Free for builders.</span></h1>
-    <p class="lede">Don't just download data — download <b>proof</b>. Every set ships with a
-      <b>notarized title deed</b>: generated by our models, graded by a tribunal, Merkle&nbsp;+&nbsp;Hedera
-      anchored. <b>Crystal clear</b> — schema, real samples, hash, and the deed, all visible before you cook.
-      Open, <b>no charge, no strings</b>.</p>
-    <div class="hstats">
-      <div><b>99</b><span>packages</span></div>
-      <div><b>3.3M+</b><span>deed-backed pairs</span></div>
-      <div><b class="green">$0</b><span>forever</span></div>
-      <div><b>✔ deed</b><span>on every set</span></div>
+    <div class="micro">Donated by Swarm &amp; Bee → OpenDiabetic</div>
+    <h1>Open, deed-backed diabetic data.<br><span>Free for builders.</span></h1>
+    <p class="lede">Don't just download data — download <b>proof</b>. Our flagship sets ship with a
+      notarized <b>title deed</b>: which model wrote it, a two-judge tribunal score, and a Merkle root.
+      And every set is <b>crystal clear</b> — schema, real sample rows, size, and SHA-256, all visible
+      before you cook. Open, <b>no charge, no strings</b>.</p>
+    <div class="cta">
+      <a class="btn" href="#catalog">Browse the catalog</a>
+      <a class="btn ghost" href="#deed">How the deed works →</a>
     </div>
+    <p class="micro">No PHI · education &amp; synthetic instruction sets only · never patient records</p>
   </div>
 </section>
 
-<section class="deedband">
+<section class="band">
+  <div class="wrap stats">
+    <div><b id="stat-sets">11</b><span>datasets in this catalog</span></div>
+    <div><b id="stat-rows">554K+</b><span>pairs you can download now</span></div>
+    <div><b id="stat-deed">6</b><span>deed-backed flagships</span></div>
+    <div><b class="honeynum">$0</b><span>free, forever</span></div>
+  </div>
+  <p class="src wrap">Counts read live from <code>catalog.json</code> · part of the wider 99-package OpenDiabetic open-data library, released here as each set is verified.</p>
+</section>
+
+<section id="deed" class="section dark">
   <div class="wrap">
-    <h2>Every dataset ships with a title deed</h2>
-    <p class="sub">Five proofs on every generated pair — provenance you can verify, not a "trust us."</p>
+    <h2>The flagship sets ship with a title deed</h2>
+    <p class="sub">Provenance you can verify, not a "trust us." Each deed-backed pair carries five proofs.</p>
     <div class="proofs">
       <div><b>① Origin</b><span>Which Swarm model generated it, on what hardware, with which strategy.</span></div>
       <div><b>② Quality</b><span>A two-judge tribunal scores it with written reasoning — math and claims checked.</span></div>
       <div><b>③ Process</b><span>Attempts, generation time, and the full cook record.</span></div>
       <div><b>④ Economics</b><span>Energy and cost to produce — honest unit economics.</span></div>
-      <div><b>⑤ Trust</b><span>Merkle root + Hedera timestamp — tamper-evident, anchored on-chain.</span></div>
+      <div><b>⑤ Trust</b><span>Merkle root over the set — tamper-evident, recomputable from the rows.</span></div>
     </div>
+    <p class="enforce">Not every set is deed-backed — the cited, education-only sets (foot care, insulin, nutrition)
+      are labeled <b>open · OpenDiabetic original</b>, with their source URLs in the rows. We never call a
+      thing more than it is.</p>
   </div>
 </section>
 
-<section class="wrap">
-  <h2 class="ctitle">🏆 The capstone sets</h2>
-  <p class="sub">Five flagship drops we're proud of — the heart of the gold.</p>
+<section class="wrap section">
+  <h2>🏆 The capstone sets</h2>
+  <p class="sub">The flagship drops we're proud of — the heart of the gold.</p>
   <div id="flagship" class="grid"></div>
 </section>
 
-<section id="catalog" class="wrap">
-  <h2 class="ctitle">All datasets</h2>
+<section id="catalog" class="wrap section">
+  <h2>The full catalog</h2>
+  <p class="sub">Every set: open the card to see schema, real sample rows, size, and SHA-256 before you download.</p>
   <div class="controls">
     <input id="search" type="search" placeholder="Search datasets — foot care, insulin, nutrition…" aria-label="Search datasets">
     <div id="filters" class="filters"></div>
@@ -90,20 +148,41 @@
   <div id="grid" class="grid"></div>
 </section>
 
-<div id="detail" class="detail hide" role="dialog" aria-modal="true">
+<div id="detail" class="detail hide" role="dialog" aria-modal="true" aria-label="Dataset detail">
   <div class="sheet">
     <button id="closeDetail" class="x" aria-label="Close">✕</button>
     <div id="detailBody"></div>
   </div>
 </div>
 
-<footer class="foot">
-  <p>🐝 DiabeticDatasets · the data layer of the hive · <a href="https://opendiabetic.com">OpenDiabetic</a> ·
-     <a href="https://localdiabetic.com">LocalDiabetic</a> · <a href="https://diabeticledger.com">DiabeticLedger</a></p>
-  <p class="muted">Open data, no PHI — education and synthetic instruction sets only, never patient records.
-     Not medical advice. License: free, no charge, no strings.</p>
-  <p class="muted">HQ · Jupiter, Florida · <a href="tel:+15615327120">561.532.7120</a> ·
-     <a href="https://x.com/opendiabetics">@opendiabetics</a> · <a href="mailto:build@opendiabetic.com">build@opendiabetic.com</a></p>
+<footer class="footer">
+  <div class="wrap">
+    <p class="fbrand"><span class="bee" aria-hidden="true">🐝</span> <b>DiabeticDatasets</b> · the data layer of the hive</p>
+    <p>OpenDiabetic is the hive · LocalDiabetic is the healers · DiabeticLedger is the proof · DiabeticDatasets is the cookbook.</p>
+    <p class="links">
+      <a href="https://opendiabetic.com">OpenDiabetic</a> ·
+      <a href="https://diabeticdocs.com">DiabeticDocs</a> ·
+      <a href="https://diabeticnode.com">DiabeticNode</a> ·
+      <a href="https://diabeticdatasets.com">DiabeticDatasets</a> ·
+      <a href="https://diabeticmodels.com">DiabeticModels</a> ·
+      <a href="https://diabetictruth.org">DiabeticTruth</a> ·
+      <a href="https://diabeticledger.com">DiabeticLedger</a> ·
+      <a href="https://diabeticdonation.com">DiabeticDonation</a> ·
+      <a href="https://localdiabetic.com">LocalDiabetic</a>
+    </p>
+    <p class="contact">
+      <a href="mailto:build@opendiabetic.com">build@opendiabetic.com</a> ·
+      HQ · Jupiter, Florida ·
+      <a href="tel:+15615327120">561.532.7120</a> ·
+      <a href="https://x.com/opendiabetics" rel="me">@opendiabetics</a>
+    </p>
+    <p class="muted">Open data, no PHI — education and synthetic instruction sets only, never patient records.
+      Not medical advice. License: free, no charge, no strings.</p>
+    <p class="motto">Give people what they need, not what you have. We are math and code.</p>
+    <p class="legal">Owned &amp; operated by <b>Swarm and Bee LLC</b> · DBA Swarm &amp; Bee AI · Florida<br>
+      UEI L9EXVH9L9VU6 · CAGE 20YM3 · D-U-N-S 138652395 · Registered &amp; active in SAM.gov<br>
+      &copy; 2026 DefendableOS · Proof of Execution.</p>
+  </div>
 </footer>
 <script src="app.js"></script>
 </body>
