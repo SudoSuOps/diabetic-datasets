@@ -107,12 +107,21 @@
 
 <section class="band">
   <div class="wrap stats">
-    <div><b id="stat-sets">11</b><span>datasets in this catalog</span></div>
-    <div><b id="stat-rows">417K</b><span>unique cited pairs</span></div>
-    <div><b id="stat-deed">6</b><span>deed-backed flagships</span></div>
+    <div><b id="stat-sets">110</b><span>datasets in the catalog</span></div>
+    <div><b id="stat-rows">3.3M+</b><span>cited pairs across the catalog</span></div>
+    <div><b id="stat-deed">6</b><span>deed-anchored sets</span></div>
     <div><b class="honeynum">$0</b><span>donated · no charge</span></div>
   </div>
-  <p class="src wrap">Honest count: <b>417,196 unique pairs</b>. The specialty cuts (cardiology, oncology, pharmacology, internal-medicine, endocrinology — 137K) are <b>subsets of the 417K Domain-Expert superset</b>, not additional rows — so we don't double-count them to 554K. Verify it yourself: <code>cat *.jsonl | sort -u | wc -l</code>. Counts read from <code>catalog.json</code>.</p>
+  <p class="src wrap"><b>Honest counts:</b> 110 distinct downloadable files. The headline number is the sum across the
+  catalog — some medical/CRE verticals include both a superset and specialty <i>cuts</i> of the same content, so the
+  unique total is lower (the diabetic-medical core is <b>417,196 unique</b>). Each file lists its real row count + SHA-256;
+  verify any of it yourself. Counts read from <code>catalog.json</code>.</p>
+  <div class="donate-banner">
+    <b>🐝 The whole vault is now donated.</b> Swarm and Bee LLC has given its entire master catalog —
+    <b>99 packages · 3,355,906 cited pairs · appraised $50,169.92</b> — to the community, free, no strings.
+    Every file was PII-scanned, scrubbed, and independently verified clean before release. The gift is
+    recorded on-chain: <a href="https://diabeticledger.com">DiabeticLedger receipt #14</a>.
+  </div>
 </section>
 
 <section id="use" class="wrap section">
