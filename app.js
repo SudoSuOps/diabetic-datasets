@@ -30,13 +30,21 @@ function fmtK(n) {
   return String(n);
 }
 
+// Specialty cuts that are SUBSETS of the medical-domain-expert-qa superset (content-hash verified
+// during the DiabeticAnchor-27B cook: combining them with the superset deduped to zero). Excluded
+// from the unique-rows total so we never double-count (554K naive sum → 417K honest unique).
+const SUBSET_SLUGS = new Set([
+  "medical-oncology", "medical-endocrinology", "medical-cardiology",
+  "medical-pharmacology", "medical-internal-medicine",
+]);
 function setStats() {
   const sets = CAT.length;
-  const rows = CAT.reduce((a, d) => a + (Number(d.rows) || 0), 0);
+  // honest unique: sum rows but skip the specialty subsets (they live inside the superset)
+  const rows = CAT.reduce((a, d) => a + (SUBSET_SLUGS.has(d.slug) ? 0 : (Number(d.rows) || 0)), 0);
   const deed = CAT.filter(d => d.deed_backed).length;
   const set = (id, v) => { const el = $(id); if (el) el.textContent = v; };
   set("#stat-sets", sets);
-  set("#stat-rows", rows ? fmtK(rows) + "+" : "—");
+  set("#stat-rows", rows ? fmtK(rows) : "—");   // no "+" — this is the true unique count, not "more than"
   set("#stat-deed", deed);
 }
 
@@ -99,6 +107,25 @@ function openDetail(slug) {
     action = `<a class="dlbtn" href="${esc(d.source_url)}" target="_blank" rel="noopener">↗ Get it from the source</a><span class="lic">${esc(d.license)} · re-hosted only with attribution</span>`;
   else
     action = `<a class="notify" href="mailto:build@opendiabetic.com?subject=Notify me: ${esc(d.name)}">🔔 Notify me — releasing soon</a><span class="lic">Deed-backed · ${esc(d.license)}</span>`;
+  const uses = (d.use_cases || []).length
+    ? `<h4>🛠️ What you can build with it</h4><ul class="bullets">${d.use_cases.map(u => `<li>${esc(u)}</li>`).join("")}</ul>` : "";
+  const value = (d.fine_tune_value || []).length
+    ? `<h4>💎 What fine-tuning on it gives your model</h4><ul class="bullets">${d.fine_tune_value.map(u => `<li>${esc(u)}</li>`).join("")}</ul>` : "";
+  const subset = d.subset_of
+    ? `<p class="subsetnote">↳ This is a specialty <b>cut of the ${esc(d.subset_of)}</b> superset — already included if you take the full set. We don't double-count it in the catalog total.</p>` : "";
+  const codeUrl = d.full_download ? d.full_download.url : (d.sample_download || "");
+  const fname = codeUrl ? codeUrl.split("/").pop().split("?")[0] : "dataset.jsonl";
+  const code = codeUrl
+    ? `<h4>⌨️ Use it in your pipeline</h4>
+       <pre class="code"><code># download it
+curl -L -o ${esc(fname)} "${esc(codeUrl)}"
+
+# verify the SHA-256 yourself (must match the hash above)
+sha256sum ${esc(fname)}
+
+# load it in Python
+from datasets import load_dataset
+ds = load_dataset("json", data_files="${esc(fname)}", split="train")</code></pre>` : "";
   $("#detailBody").innerHTML = `
     <span class="badge ${esc(d.tier)}">${esc(d.tier)}</span> <h2>${esc(d.name)}</h2>
     <p class="sub">${esc(d.category)} — ${esc(d.description)}</p>
@@ -108,10 +135,14 @@ function openDetail(slug) {
       <div class="k"><b>${esc(d.size)}</b><span>size</span></div>
       <div class="k"><b class="${d.status === "available" ? "green" : ""}">${esc(d.status)}</b><span>status</span></div>
     </div>
+    ${subset}
+    ${uses}
+    ${value}
     ${deed}
     <h4>Schema</h4>${schema}
     <h4>Real sample rows (verify before you cook)</h4><pre class="sample">${samples}</pre>
     <h4>SHA-256</h4><p class="hash">${esc(d.sha256)}</p>
+    ${code}
     <div class="dlbar">${action}</div>`;
   $("#detail").classList.remove("hide");
   document.body.style.overflow = "hidden";

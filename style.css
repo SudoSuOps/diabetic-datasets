@@ -172,3 +172,11 @@ pre.sample{background:var(--ink-900);border:1px solid var(--line);border-radius:
 .vresult{font-weight:700;margin-top:12px;padding:10px 12px;border-radius:8px;background:#f3ecdd}
 .vresult.ok{background:#e6f7ee;color:#1d8a52;border:1px solid #a8e0c4}
 .vresult.bad{background:#fdecec;color:#b3322f;border:1px solid #f0b9b7}
+
+/* ---- use-cases / value / code / pay-it-forward ---- */
+.bullets{margin:8px 0 10px 20px;padding:0}
+.bullets li{margin:6px 0}
+.subsetnote{background:#fdf1da;border:1px solid #ead0a0;border-radius:8px;padding:9px 12px;font-size:14px;color:#7a5d12;margin:10px 0}
+.code{background:#0B0F14;color:#e9eef5;padding:16px 18px;border-radius:12px;overflow:auto;font-size:13px;line-height:1.6;font-family:ui-monospace,Menlo,Consolas,monospace;margin:12px 0}
+.code code{background:none;color:inherit}
+#payforward .btn{margin-top:8px;display:inline-block}

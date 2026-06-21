@@ -47,7 +47,15 @@
       "license": "OpenDiabetic Open Data — free, no charge",
       "status": "available",
       "sample_download": "data/diabetic-foot-care-qa-sample.jsonl",
-      "flagship": true
+      "flagship": true,
+      "use_cases": [
+        "A patient-facing foot-care educator (organize + remind, never diagnose)",
+        "The corpus behind footcare-edge-4b"
+      ],
+      "fine_tune_value": [
+        "Cited foot-care facts — the highest-stakes, most preventable diabetic complication",
+        "Small, crystal-clear, every fact sourced"
+      ]
     },
     {
       "slug": "diabetic-foot-care-hardfacts",
@@ -134,7 +142,13 @@
       "license": "OpenDiabetic Open Data — free, no charge",
       "status": "available",
       "sample_download": "data/footcare-hardfacts.canary.jsonl",
-      "flagship": true
+      "flagship": true,
+      "use_cases": [
+        "Hard, fully-cited foot-care facts for a careful educator model"
+      ],
+      "fine_tune_value": [
+        "20 canary-grade hardfacts — every one carries its source"
+      ]
     },
     {
       "slug": "insulin-storage-handling",
@@ -167,7 +181,13 @@
       "license": "OpenDiabetic Open Data — free, no charge",
       "status": "available",
       "sample_download": "data/insulin-storage-handling-sample.jsonl",
-      "flagship": false
+      "flagship": false,
+      "use_cases": [
+        "An insulin storage & handling educator"
+      ],
+      "fine_tune_value": [
+        "Cited insulin-handling facts — closes a common, dangerous knowledge gap"
+      ]
     },
     {
       "slug": "diabetic-plate-nutrition",
@@ -200,7 +220,13 @@
       "license": "OpenDiabetic Open Data — free, no charge",
       "status": "available",
       "sample_download": "data/diabetic-plate-nutrition-sample.jsonl",
-      "flagship": false
+      "flagship": false,
+      "use_cases": [
+        "A diabetic plate / nutrition educator"
+      ],
+      "fine_tune_value": [
+        "Cited nutrition guidance — the plate method, sourced"
+      ]
     },
     {
       "slug": "medical-domain-expert-qa",
@@ -262,7 +288,17 @@
         "sha256": "7db7de18efffd2ba312f14db94e0f6ae0144e94cbdfaa32d99068da047dc7155",
         "note": "branded download (data.diabeticdatasets.com) activating — cert provisioning"
       },
-      "flagship": true
+      "flagship": true,
+      "use_cases": [
+        "Fine-tune a clinician-grade medical reasoning assistant across 60+ specialties",
+        "Bootstrap a domain-expert medical base before you specialize",
+        "Instruction-tune for systematic, structured clinical reasoning (not rote recall)"
+      ],
+      "fine_tune_value": [
+        "The broadest cited medical QA corpus in the catalog — 417,136 board-certified-style pairs",
+        "Teaches systematic differential reasoning and structured answers",
+        "The superset the specialty cuts are drawn from — train once, cover many fields"
+      ]
     },
     {
       "slug": "medical-oncology",
@@ -327,7 +363,14 @@
         "rows": 1537,
         "size": "2.9 MB",
         "sha256": "0f320b6de5946b5a9b8ccb8a7cd3db451afdd9d86a443fb05b8abe23136647ad"
-      }
+      },
+      "use_cases": [
+        "Oncology case reasoning, staging, regimen Q&A"
+      ],
+      "fine_tune_value": [
+        "1.5K oncology pairs — a focused cut of the superset"
+      ],
+      "subset_of": "medical-domain-expert-qa"
     },
     {
       "slug": "medical-endocrinology",
@@ -392,7 +435,15 @@
         "rows": 995,
         "size": "1.8 MB",
         "sha256": "4e9de6b783e460044343eac4f251391b2eda346da7b2ac479d5157fb9e8eb256"
-      }
+      },
+      "use_cases": [
+        "Endocrine + diabetes-adjacent reasoning",
+        "The most relevant medical cut for diabetes models"
+      ],
+      "fine_tune_value": [
+        "995 endocrinology pairs — the diabetes-adjacent specialty cut of the superset"
+      ],
+      "subset_of": "medical-domain-expert-qa"
     },
     {
       "slug": "medical-cardiology",
@@ -457,7 +508,16 @@
         "rows": 13166,
         "size": "80.5 MB",
         "sha256": "49a59489ad322854dc5ea6e14f4a999582cdce428c0c6b1c0788a38e1d9e4d99"
-      }
+      },
+      "use_cases": [
+        "Cardiac case + ECG-style reasoning",
+        "Cardiology triage assistant"
+      ],
+      "fine_tune_value": [
+        "13K cardiology pairs (a cut of the superset)",
+        "Makes a model cardiac-aware"
+      ],
+      "subset_of": "medical-domain-expert-qa"
     },
     {
       "slug": "medical-pharmacology",
@@ -522,7 +582,16 @@
         "rows": 22388,
         "size": "52.6 MB",
         "sha256": "5c65e13e85e9ae3c713e2446c1f3e116211ad76c4b2a2aa7292bf7318acbcebb"
-      }
+      },
+      "use_cases": [
+        "Drug-interaction, dosing, and mechanism reasoning",
+        "A clinical-pharmacology copilot"
+      ],
+      "fine_tune_value": [
+        "22K pharmacology pairs (a cut of the superset)",
+        "Reduces dosing/interaction hallucination vs a general base"
+      ],
+      "subset_of": "medical-domain-expert-qa"
     },
     {
       "slug": "medical-internal-medicine",
@@ -587,7 +656,16 @@
         "rows": 98986,
         "size": "252.3 MB",
         "sha256": "38fb516b1bf799ff0a22994614e3f69df8c7544e993698e297815e671d5c7cc3"
-      }
+      },
+      "use_cases": [
+        "Sharpen internal-medicine differential diagnosis",
+        "Add hospitalist / primary-care depth to a general medical model"
+      ],
+      "fine_tune_value": [
+        "99K internal-medicine pairs — a clean cut of the 417K superset",
+        "Strong for IM triage and management reasoning"
+      ],
+      "subset_of": "medical-domain-expert-qa"
     },
     {
       "slug": "diabetic-cgm-glycemic",
@@ -619,7 +697,13 @@
       "license": "ODC-By (Open Data Commons Attribution)",
       "status": "open-source",
       "source_url": "https://physionet.org/content/big-ideas-glycemic-wearable/",
-      "flagship": true
+      "flagship": true,
+      "use_cases": [
+        "CGM / glycemic wearable signal research (time-series, not instruction-tuning)"
+      ],
+      "fine_tune_value": [
+        "Real-world Dexcom-style glycemic data from the PhysioNet source"
+      ]
     }
   ]
 }
