@@ -162,3 +162,13 @@ pre.sample{background:var(--ink-900);border:1px solid var(--line);border-radius:
   .hero{padding:48px 0 54px}
   .section{padding:48px 0}
 }
+
+/* ---- verify-it-yourself widget ---- */
+.verify-box{background:#fff;border:1px solid var(--paper-line,#e6dcc8);border-radius:14px;padding:20px 22px;box-shadow:0 6px 24px rgba(43,33,24,.07);max-width:760px;margin:0 auto}
+.verify-box label{display:block;margin:10px 0;font-weight:700}
+.verify-box select,.verify-box input[type=file]{display:block;margin-top:6px;width:100%;padding:9px 10px;border:1px solid #e6dcc8;border-radius:8px;background:#fbf7ef;font:inherit}
+.vmono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;color:#6b5e4f;word-break:break-all;margin:6px 0}
+.vmono span{color:#2B2118}
+.vresult{font-weight:700;margin-top:12px;padding:10px 12px;border-radius:8px;background:#f3ecdd}
+.vresult.ok{background:#e6f7ee;color:#1d8a52;border:1px solid #a8e0c4}
+.vresult.bad{background:#fdecec;color:#b3322f;border:1px solid #f0b9b7}

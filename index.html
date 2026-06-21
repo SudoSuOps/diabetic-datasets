@@ -138,6 +138,22 @@
   <div id="flagship" class="grid"></div>
 </section>
 
+<section id="verify" class="wrap section">
+  <h2>🔐 Verify it yourself</h2>
+  <p class="sub">Crystal-clear isn't "trust us." Pick a dataset, choose the file you downloaded, and your
+    <b>own browser</b> recomputes its SHA-256 and checks it against the published hash. The file never leaves your machine.</p>
+  <div class="verify-box">
+    <label>Dataset <select id="vSet" aria-label="Choose dataset"></select></label>
+    <label>Your downloaded file <input id="vFile" type="file" aria-label="Choose downloaded file"></label>
+    <p class="vmono">published&nbsp;sha256: <span id="vExpected">—</span></p>
+    <p class="vmono">computed&nbsp;sha256: <span id="vComputed">—</span></p>
+    <p id="vResult" class="vresult" role="status">Choose a dataset and a file to verify.</p>
+    <details><summary>Prefer the command line?</summary>
+      <pre><code id="vCmd">sha256sum your-file.jsonl
+# compare the output to the published sha256 above</code></pre></details>
+  </div>
+</section>
+
 <section id="catalog" class="wrap section">
   <h2>The full catalog</h2>
   <p class="sub">Every set: open the card to see schema, real sample rows, size, and SHA-256 before you download.</p>
@@ -185,5 +201,29 @@
   </div>
 </footer>
 <script src="app.js"></script>
+<script>
+(function(){
+  var SHA={"diabetic-foot-care-qa": "c37b50e876b337e347322520c3e154ff2cbf7daccf4b545065527941e4febb3e", "diabetic-foot-care-hardfacts": "ae528b211ef85a000e74ae6ad79296416becc23f37e68b95357c2124e6d99398", "insulin-storage-handling": "a02b95e42ae0fb63f64bce6fc977d08d18b1c1a3b4aec99d4906b0d7234afde8", "diabetic-plate-nutrition": "c8e7c026c6281556fbd57e6565ff2409e7d39b94a69df7a4ce60f559162c2923", "medical-domain-expert-qa": "7db7de18efffd2ba312f14db94e0f6ae0144e94cbdfaa32d99068da047dc7155", "medical-oncology": "0f320b6de5946b5a9b8ccb8a7cd3db451afdd9d86a443fb05b8abe23136647ad", "medical-endocrinology": "4e9de6b783e460044343eac4f251391b2eda346da7b2ac479d5157fb9e8eb256", "medical-cardiology": "49a59489ad322854dc5ea6e14f4a999582cdce428c0c6b1c0788a38e1d9e4d99", "medical-pharmacology": "5c65e13e85e9ae3c713e2446c1f3e116211ad76c4b2a2aa7292bf7318acbcebb", "medical-internal-medicine": "38fb516b1bf799ff0a22994614e3f69df8c7544e993698e297815e671d5c7cc3"};
+  var sel=document.getElementById("vSet"), exp=document.getElementById("vExpected"),
+      comp=document.getElementById("vComputed"), res=document.getElementById("vResult"), fileIn=document.getElementById("vFile");
+  if(!sel) return;
+  Object.keys(SHA).forEach(function(k){var o=document.createElement("option");o.value=k;o.textContent=k;sel.appendChild(o);});
+  function refresh(){ exp.textContent=SHA[sel.value]||"—"; comp.textContent="—"; res.className="vresult"; res.textContent="Choose your downloaded file to verify."; }
+  sel.addEventListener("change",refresh); refresh();
+  fileIn.addEventListener("change",async function(){
+    var f=fileIn.files[0]; if(!f) return;
+    res.className="vresult"; res.textContent="Hashing "+f.name+" in your browser…"; comp.textContent="…";
+    try{
+      var buf=await f.arrayBuffer();
+      var dig=await crypto.subtle.digest("SHA-256",buf);
+      var hex=Array.from(new Uint8Array(dig)).map(b=>b.toString(16).padStart(2,"0")).join("");
+      comp.textContent=hex;
+      if(hex===SHA[sel.value]){ res.className="vresult ok"; res.textContent="✅ Verified — this file matches the published hash exactly. Deeded and intact."; }
+      else { res.className="vresult bad"; res.textContent="❌ Mismatch — this file does NOT match the published hash for "+sel.value+". Re-download, or you selected the wrong file."; }
+    }catch(e){ res.className="vresult bad"; res.textContent="Couldn't hash that file in-browser: "+e.message; }
+  });
+})();
+</script>
+
 </body>
 </html>
