@@ -97,7 +97,7 @@ function openDetail(slug) {
     </div>` : `<h4>Provenance</h4><p class="muted">${esc(d.provenance)}</p>`;
   let action;
   const full = d.full_download
-    ? `<a class="dlbtn full" href="${esc(d.full_download.url)}" download>⬇ Download full set · ${esc(d.full_download.size)} · ${num(d.full_download.rows)} rows</a>`
+    ? `<a class="dlbtn full" href="/dl/${esc(d.slug)}">⬇ Download full set · ${esc(d.full_download.size)} · ${num(d.full_download.rows)} rows</a>`
     : "";
   if (d.full_download && d.sample_download)
     action = `${full}<a class="dlbtn ghost" href="${esc(d.sample_download)}" download>⬇ Sample (12 rows)</a><span class="lic">${esc(d.license)}</span>`;
@@ -113,9 +113,11 @@ function openDetail(slug) {
     ? `<h4>💎 What fine-tuning on it gives your model</h4><ul class="bullets">${d.fine_tune_value.map(u => `<li>${esc(u)}</li>`).join("")}</ul>` : "";
   const subset = d.subset_of
     ? `<p class="subsetnote">↳ This is a specialty <b>cut of the ${esc(d.subset_of)}</b> superset — already included if you take the full set. We don't double-count it in the catalog total.</p>` : "";
-  const codeUrl = d.full_download ? d.full_download.url : (d.sample_download || "");
-  const fname = codeUrl ? codeUrl.split("/").pop().split("?")[0] : "dataset.jsonl";
-  const code = codeUrl
+  const realUrl = d.full_download ? d.full_download.url : (d.sample_download || "");
+  const fname = realUrl ? realUrl.split("/").pop().split("?")[0] : "dataset.jsonl";
+  // route the documented download through the tracked /dl/<slug> redirect (so we keep a record)
+  const codeUrl = d.full_download ? `https://diabeticdatasets.com/dl/${d.slug}` : realUrl;
+  const code = realUrl
     ? `<h4>⌨️ Use it in your pipeline</h4>
        <pre class="code"><code># download it
 curl -L -o ${esc(fname)} "${esc(codeUrl)}"
