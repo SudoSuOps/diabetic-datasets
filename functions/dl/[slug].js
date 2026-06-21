@@ -4,7 +4,7 @@
 // Tigris URLs (for the SHA verify widget); only the download button/CLI route through here so
 // we have a record of what the community actually pulls.
 //
-// Storage binding (optional but recommended): a KV namespace bound as `DL` in the Pages project.
+// v2 — DL KV binding active. Storage binding (optional but recommended): a KV namespace bound as `DL` in the Pages project.
 //   Cloudflare Pages → Settings → Functions → KV namespace bindings → Variable name: DL
 // Without it, downloads still work; they just aren't counted.
 
