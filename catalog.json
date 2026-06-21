@@ -2,14 +2,14 @@
   "platform": "DiabeticDatasets",
   "tagline": "Deed-backed diabetic & medical datasets. Free for builders.",
   "generated": "2026-06-20",
-  "donated_by": "Swarm & Bee \u2192 OpenDiabetic",
+  "donated_by": "Swarm & Bee → OpenDiabetic",
   "deed_system": {
     "system": "Swarm & Bee Title Deed v1.0",
     "writer_model": "gemma-4-31B-it-swarmgrant",
     "tribunal": "two-judge tribunal (scored reasoning)",
     "anchor": "Merkle root + Hedera (topic 0.0.10291838)"
   },
-  "license": "OpenDiabetic Open Data \u2014 free, no charge, no strings",
+  "license": "OpenDiabetic Open Data — free, no charge, no strings",
   "scale": {
     "packages": 99,
     "pairs": "3,355,906",
@@ -20,7 +20,7 @@
       "slug": "diabetic-foot-care-qa",
       "name": "Diabetic Foot-Care Q&A",
       "category": "Foot care",
-      "description": "Instruction\u2013response pairs teaching diabetic foot-care habits, warning signs, and visit prep. Education only.",
+      "description": "Instruction–response pairs teaching diabetic foot-care habits, warning signs, and visit prep. Education only.",
       "tier": "honey",
       "format": "jsonl",
       "rows": 15,
@@ -39,15 +39,96 @@
       "samples": [
         {
           "instruction": "Why is daily foot care so important for people with diabetes?",
-          "response": "Diabetes can reduce blood flow and dull the nerves in the feet, so a small cut, blister, or sore may go unnoticed and heal slowly. A quick daily check catches problems early, while they are still small and easy to treat. This is general education, not medical advice \u2014 confirm any concern with your clinician."
+          "response": "Diabetes can reduce blood flow and dull the nerves in the feet, so a small cut, blister, or sore may go unnoticed and heal slowly. A quick daily check catches problems early, while they are still small and easy to treat. This is general education, not medical advice — confirm any concern with your clinician."
         }
       ],
-      "provenance": "OpenDiabetic original \u00b7 education",
+      "provenance": "OpenDiabetic original · education",
       "deed_backed": false,
-      "license": "OpenDiabetic Open Data \u2014 free, no charge",
+      "license": "OpenDiabetic Open Data — free, no charge",
       "status": "available",
       "sample_download": "data/diabetic-foot-care-qa-sample.jsonl",
       "flagship": true
+    },
+    {
+      "slug": "diabetic-foot-care-hardfacts",
+      "name": "Diabetic Foot-Care Hard-Facts (Cited)",
+      "category": "Foot care",
+      "description": "Sourced, cited foot-care hard facts — every record links to an authoritative source (NIDDK, IWGDF 2023). Educate/organize, never diagnose. The grounding corpus behind the LocalDiabetic foot-care model; powers diabetictruth.org. Verify each fact against its source URL.",
+      "tier": "honey",
+      "format": "jsonl",
+      "rows": 20,
+      "size": "9.2 KB",
+      "sha256": "ae528b211ef85a000e74ae6ad79296416becc23f37e68b95357c2124e6d99398",
+      "sources": [
+        "NIDDK (NIH)",
+        "IWGDF 2023"
+      ],
+      "schema": [
+        {
+          "field": "id",
+          "type": "string"
+        },
+        {
+          "field": "category",
+          "type": "string"
+        },
+        {
+          "field": "fact",
+          "type": "string"
+        },
+        {
+          "field": "mode",
+          "type": "string (educate|surface-to-clinician|standard-of-care)"
+        },
+        {
+          "field": "source",
+          "type": "string"
+        },
+        {
+          "field": "source_url",
+          "type": "string (verify here)"
+        },
+        {
+          "field": "retrieved",
+          "type": "string (date)"
+        },
+        {
+          "field": "doctrine",
+          "type": "string"
+        }
+      ],
+      "samples": [
+        {
+          "id": "fc-001",
+          "category": "daily-inspection",
+          "fact": "Check your feet every day. Look at the tops, bottoms, sides, heels, and between the toes. Use a mirror or ask someone for help if you cannot see the bottoms of your feet.",
+          "mode": "educate",
+          "source": "NIDDK (NIH)",
+          "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/foot-problems",
+          "retrieved": "2026-06-20",
+          "doctrine": "educational — not diagnosis"
+        },
+        {
+          "id": "fc-006",
+          "category": "hygiene-washing",
+          "fact": "Wash your feet with soap in warm — not hot — water. Test the water with a thermometer (90–95°F is safe) or your elbow, because diabetic nerve damage can keep you from feeling that water is too hot.",
+          "mode": "educate",
+          "source": "NIDDK (NIH)",
+          "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/foot-problems",
+          "retrieved": "2026-06-20",
+          "doctrine": "educational — not diagnosis"
+        },
+        {
+          "id": "fc-019",
+          "category": "offloading",
+          "fact": "For a neuropathic plantar (bottom-of-foot) ulcer, the preferred treatment is a non-removable knee-high offloading device (such as a total contact cast). If a removable device is used instead, it must be worn during all weight-bearing activity to heal.",
+          "mode": "educate",
+          "source": "IWGDF 2023 (Offloading Guideline)",
+          "source_url": "https://iwgdfguidelines.org/wp-content/uploads/2023/07/IWGDF-2023-06-Offloading-Guideline.pdf",
+          "retrieved": "2026-06-20",
+          "doctrine": "educational — describes standard of care, not a personal treatment instruction"
+        }
+      ]
     },
     {
       "slug": "insulin-storage-handling",
@@ -72,12 +153,12 @@
       "samples": [
         {
           "instruction": "How should unopened insulin be stored?",
-          "response": "Unopened insulin is generally kept in the refrigerator (about 36\u201346\u00b0F / 2\u20138\u00b0C) until its expiration date. Do not freeze it \u2014 insulin that has been frozen should not be used. This is general education; follow the storage instructions on your specific product and ask your pharmacist."
+          "response": "Unopened insulin is generally kept in the refrigerator (about 36–46°F / 2–8°C) until its expiration date. Do not freeze it — insulin that has been frozen should not be used. This is general education; follow the storage instructions on your specific product and ask your pharmacist."
         }
       ],
-      "provenance": "OpenDiabetic original \u00b7 education",
+      "provenance": "OpenDiabetic original · education",
       "deed_backed": false,
-      "license": "OpenDiabetic Open Data \u2014 free, no charge",
+      "license": "OpenDiabetic Open Data — free, no charge",
       "status": "available",
       "sample_download": "data/insulin-storage-handling-sample.jsonl",
       "flagship": false
@@ -105,25 +186,25 @@
       "samples": [
         {
           "instruction": "What is the diabetes plate method?",
-          "response": "The plate method is a simple way to build a balanced meal: fill about half a 9-inch plate with non-starchy vegetables, one quarter with lean protein, and one quarter with carbohydrate foods, plus water or a no-calorie drink. It is general education \u2014 a dietitian can tailor it to you."
+          "response": "The plate method is a simple way to build a balanced meal: fill about half a 9-inch plate with non-starchy vegetables, one quarter with lean protein, and one quarter with carbohydrate foods, plus water or a no-calorie drink. It is general education — a dietitian can tailor it to you."
         }
       ],
-      "provenance": "OpenDiabetic original \u00b7 education",
+      "provenance": "OpenDiabetic original · education",
       "deed_backed": false,
-      "license": "OpenDiabetic Open Data \u2014 free, no charge",
+      "license": "OpenDiabetic Open Data — free, no charge",
       "status": "available",
       "sample_download": "data/diabetic-plate-nutrition-sample.jsonl",
       "flagship": false
     },
     {
       "slug": "medical-domain-expert-qa",
-      "name": "Medical Domain-Expert QA \u2014 Full Drop",
-      "category": "Medical \u00b7 multi-specialty",
+      "name": "Medical Domain-Expert QA — Full Drop",
+      "category": "Medical · multi-specialty",
       "description": "The whole corpus: 417,136 board-certified domain-expert QA pairs across 60+ specialties (internal medicine, surgery, neurology, oncology, cardiology, pharmacology, pathology, and more). Tribunal-verified, deed-backed, transformative synthetic clinical scenarios.",
       "tier": "platinum",
       "format": "jsonl (messages)",
       "rows": 417136,
-      "size": "1.06 GB \u00b7 417,136 pairs",
+      "size": "1.06 GB · 417,136 pairs",
       "sha256": "7db7de18efffd2ba312f14db94e0f6ae0144e94cbdfaa32d99068da047dc7155",
       "schema": [
         {
@@ -157,7 +238,7 @@
           }
         }
       ],
-      "provenance": "Generated by gemma-4-31B-it-swarmgrant \u00b7 two-judge tribunal (scored reasoning) \u00b7 Merkle root + Hedera (topic 0.0.10291838)",
+      "provenance": "Generated by gemma-4-31B-it-swarmgrant · two-judge tribunal (scored reasoning) · Merkle root + Hedera (topic 0.0.10291838)",
       "deed_backed": true,
       "deed": {
         "system": "Swarm & Bee Title Deed v1.0",
@@ -165,7 +246,7 @@
         "tribunal": "two-judge tribunal (scored reasoning)",
         "anchor": "Merkle root + Hedera (topic 0.0.10291838)"
       },
-      "license": "Swarm deed-backed \u00b7 free for builders",
+      "license": "Swarm deed-backed · free for builders",
       "status": "available",
       "sample_download": "data/medical-oncology-sample.jsonl",
       "full_download": {
@@ -173,7 +254,7 @@
         "rows": 417136,
         "size": "1.06 GB",
         "sha256": "7db7de18efffd2ba312f14db94e0f6ae0144e94cbdfaa32d99068da047dc7155",
-        "note": "branded download (data.diabeticdatasets.com) activating \u2014 cert provisioning"
+        "note": "branded download (data.diabeticdatasets.com) activating — cert provisioning"
       },
       "flagship": true
     },
@@ -181,11 +262,11 @@
       "slug": "medical-oncology",
       "name": "Oncology Domain-Expert QA",
       "category": "Oncology",
-      "description": "Board-certified oncology QA \u2014 staging, treatment planning, and management across solid and heme malignancies. Transformative synthetic clinical scenarios.",
+      "description": "Board-certified oncology QA — staging, treatment planning, and management across solid and heme malignancies. Transformative synthetic clinical scenarios.",
       "tier": "platinum",
       "format": "jsonl (messages)",
       "rows": 1537,
-      "size": "sample shown \u00b7 2.9 MB full (1,537 rows)",
+      "size": "sample shown · 2.9 MB full (1,537 rows)",
       "sha256": "46914f704ac3394be82b94f7392e30a4502f88755b1718eeec69a9ee3c81481c",
       "schema": [
         {
@@ -222,7 +303,7 @@
           }
         }
       ],
-      "provenance": "Generated by gemma-4-31B-it-swarmgrant \u00b7 two-judge tribunal (scored reasoning) \u00b7 Merkle root + Hedera (topic 0.0.10291838)",
+      "provenance": "Generated by gemma-4-31B-it-swarmgrant · two-judge tribunal (scored reasoning) · Merkle root + Hedera (topic 0.0.10291838)",
       "deed_backed": true,
       "deed": {
         "system": "Swarm & Bee Title Deed v1.0",
@@ -230,7 +311,7 @@
         "tribunal": "two-judge tribunal (scored reasoning)",
         "anchor": "Merkle root + Hedera (topic 0.0.10291838)"
       },
-      "license": "Swarm deed-backed \u00b7 free for builders",
+      "license": "Swarm deed-backed · free for builders",
       "status": "available",
       "sample_download": "data/medical-oncology-sample.jsonl",
       "full_rows": 1537,
@@ -246,11 +327,11 @@
       "slug": "medical-endocrinology",
       "name": "Endocrinology & Diabetes QA",
       "category": "Endocrinology",
-      "description": "Endocrinology and diabetes domain-expert QA \u2014 glucose regulation, thyroid, adrenal, and metabolic reasoning. Synthetic scenarios.",
+      "description": "Endocrinology and diabetes domain-expert QA — glucose regulation, thyroid, adrenal, and metabolic reasoning. Synthetic scenarios.",
       "tier": "platinum",
       "format": "jsonl (messages)",
       "rows": 995,
-      "size": "sample shown \u00b7 1.8 MB full (995 rows)",
+      "size": "sample shown · 1.8 MB full (995 rows)",
       "sha256": "511901948ed501a15b65831251aee53575fdd57c4c16a1cf08eda8eedb0166fe",
       "schema": [
         {
@@ -287,7 +368,7 @@
           }
         }
       ],
-      "provenance": "Generated by gemma-4-31B-it-swarmgrant \u00b7 two-judge tribunal (scored reasoning) \u00b7 Merkle root + Hedera (topic 0.0.10291838)",
+      "provenance": "Generated by gemma-4-31B-it-swarmgrant · two-judge tribunal (scored reasoning) · Merkle root + Hedera (topic 0.0.10291838)",
       "deed_backed": true,
       "deed": {
         "system": "Swarm & Bee Title Deed v1.0",
@@ -295,7 +376,7 @@
         "tribunal": "two-judge tribunal (scored reasoning)",
         "anchor": "Merkle root + Hedera (topic 0.0.10291838)"
       },
-      "license": "Swarm deed-backed \u00b7 free for builders",
+      "license": "Swarm deed-backed · free for builders",
       "status": "available",
       "sample_download": "data/medical-endocrinology-sample.jsonl",
       "full_rows": 995,
@@ -311,11 +392,11 @@
       "slug": "medical-cardiology",
       "name": "Cardiology & ECG QA",
       "category": "Cardiology",
-      "description": "Cardiology domain-expert QA \u2014 ECG interpretation, ischemia, heart failure, and structured cardiac reasoning.",
+      "description": "Cardiology domain-expert QA — ECG interpretation, ischemia, heart failure, and structured cardiac reasoning.",
       "tier": "platinum",
       "format": "jsonl (messages)",
       "rows": 13166,
-      "size": "sample shown \u00b7 80.5 MB full (13,166 rows)",
+      "size": "sample shown · 80.5 MB full (13,166 rows)",
       "sha256": "eb21a7812e3fd6f79db5cd2b573533c234122445307b1614126aabd64c2bc18a",
       "schema": [
         {
@@ -352,7 +433,7 @@
           }
         }
       ],
-      "provenance": "Generated by gemma-4-31B-it-swarmgrant \u00b7 two-judge tribunal (scored reasoning) \u00b7 Merkle root + Hedera (topic 0.0.10291838)",
+      "provenance": "Generated by gemma-4-31B-it-swarmgrant · two-judge tribunal (scored reasoning) · Merkle root + Hedera (topic 0.0.10291838)",
       "deed_backed": true,
       "deed": {
         "system": "Swarm & Bee Title Deed v1.0",
@@ -360,7 +441,7 @@
         "tribunal": "two-judge tribunal (scored reasoning)",
         "anchor": "Merkle root + Hedera (topic 0.0.10291838)"
       },
-      "license": "Swarm deed-backed \u00b7 free for builders",
+      "license": "Swarm deed-backed · free for builders",
       "status": "available",
       "sample_download": "data/medical-cardiology-sample.jsonl",
       "full_rows": 13166,
@@ -376,11 +457,11 @@
       "slug": "medical-pharmacology",
       "name": "Clinical Pharmacology QA",
       "category": "Pharmacology",
-      "description": "Clinical pharmacology QA \u2014 mechanisms, dosing principles, interactions, and adjustment in organ impairment.",
+      "description": "Clinical pharmacology QA — mechanisms, dosing principles, interactions, and adjustment in organ impairment.",
       "tier": "platinum",
       "format": "jsonl (messages)",
       "rows": 22085,
-      "size": "sample shown \u00b7 52.6 MB full (22,388 rows)",
+      "size": "sample shown · 52.6 MB full (22,388 rows)",
       "sha256": "90c8ee342070926ea180a3fdfe83b67a29e544280dce54091b59444ea081ed89",
       "schema": [
         {
@@ -417,7 +498,7 @@
           }
         }
       ],
-      "provenance": "Generated by gemma-4-31B-it-swarmgrant \u00b7 two-judge tribunal (scored reasoning) \u00b7 Merkle root + Hedera (topic 0.0.10291838)",
+      "provenance": "Generated by gemma-4-31B-it-swarmgrant · two-judge tribunal (scored reasoning) · Merkle root + Hedera (topic 0.0.10291838)",
       "deed_backed": true,
       "deed": {
         "system": "Swarm & Bee Title Deed v1.0",
@@ -425,7 +506,7 @@
         "tribunal": "two-judge tribunal (scored reasoning)",
         "anchor": "Merkle root + Hedera (topic 0.0.10291838)"
       },
-      "license": "Swarm deed-backed \u00b7 free for builders",
+      "license": "Swarm deed-backed · free for builders",
       "status": "available",
       "sample_download": "data/medical-pharmacology-sample.jsonl",
       "full_rows": 22085,
@@ -445,7 +526,7 @@
       "tier": "platinum",
       "format": "jsonl (messages)",
       "rows": 98986,
-      "size": "sample shown \u00b7 252.3 MB full (98,986 rows)",
+      "size": "sample shown · 252.3 MB full (98,986 rows)",
       "sha256": "d6913d50fc00f2efe89ae10f833badfb4f888fa70b820cdfd5b852323200f7d2",
       "schema": [
         {
@@ -470,7 +551,7 @@
             },
             {
               "role": "assistant",
-              "content": "The major barriers to ensuring quality palliative and end-of-life care include the difficulty in providing an accurate prognosis and the emotional resistance of patients and their families to accepting a poor prognosis. Many patients and families interpret the initiation of palliative care as synonymous with 'giving up hope,' treatment futility, or the end of curative options, which can lead to avoidance or delayed engagement with palliative services. This misconception creates significant obstacles to timely symptom management, psychosocial support, and advance care planning. A key solution is the early integration of palliative care with curative therapies, regardless of prognosis. This model reframes palliative care as a complementary component of comprehensive care focused on improving quality of life, managing symptoms, and aligning treatment with patient values\u2014rather than signaling treatment failure. Fundamental to this integration is continuous goal assessment, which involves routinely discussing patients\u2019 values, preferences, and treatment goals during regular clinical encounters. This ongoing dialogue allows for dynamic adjustments in care plans as the illness progresses, promotes shared decision-making, and ensures that medical interventions remain congruent with patient-centered goals. Evidence from randomized trials, such as those in metastatic cancer patients, shows that early palliative care integration improves quality of life, reduces depression, and may even extend survival. By normalizing these conversations, clinicians can reduce the stigma associated with palliative care and facilitate smoother transitions when curative options are exhausted. (Adapted from Harrison\u2019s Principles of Internal Medicine, palliative care section.)"
+              "content": "The major barriers to ensuring quality palliative and end-of-life care include the difficulty in providing an accurate prognosis and the emotional resistance of patients and their families to accepting a poor prognosis. Many patients and families interpret the initiation of palliative care as synonymous with 'giving up hope,' treatment futility, or the end of curative options, which can lead to avoidance or delayed engagement with palliative services. This misconception creates significant obstacles to timely symptom management, psychosocial support, and advance care planning. A key solution is the early integration of palliative care with curative therapies, regardless of prognosis. This model reframes palliative care as a complementary component of comprehensive care focused on improving quality of life, managing symptoms, and aligning treatment with patient values—rather than signaling treatment failure. Fundamental to this integration is continuous goal assessment, which involves routinely discussing patients’ values, preferences, and treatment goals during regular clinical encounters. This ongoing dialogue allows for dynamic adjustments in care plans as the illness progresses, promotes shared decision-making, and ensures that medical interventions remain congruent with patient-centered goals. Evidence from randomized trials, such as those in metastatic cancer patients, shows that early palliative care integration improves quality of life, reduces depression, and may even extend survival. By normalizing these conversations, clinicians can reduce the stigma associated with palliative care and facilitate smoother transitions when curative options are exhausted. (Adapted from Harrison’s Principles of Internal Medicine, palliative care section.)"
             }
           ],
           "metadata": {
@@ -482,7 +563,7 @@
           }
         }
       ],
-      "provenance": "Generated by gemma-4-31B-it-swarmgrant \u00b7 two-judge tribunal (scored reasoning) \u00b7 Merkle root + Hedera (topic 0.0.10291838)",
+      "provenance": "Generated by gemma-4-31B-it-swarmgrant · two-judge tribunal (scored reasoning) · Merkle root + Hedera (topic 0.0.10291838)",
       "deed_backed": true,
       "deed": {
         "system": "Swarm & Bee Title Deed v1.0",
@@ -490,7 +571,7 @@
         "tribunal": "two-judge tribunal (scored reasoning)",
         "anchor": "Merkle root + Hedera (topic 0.0.10291838)"
       },
-      "license": "Swarm deed-backed \u00b7 free for builders",
+      "license": "Swarm deed-backed · free for builders",
       "status": "available",
       "sample_download": "data/medical-internal-medicine-sample.jsonl",
       "full_rows": 98986,
@@ -524,10 +605,10 @@
       ],
       "samples": [
         {
-          "note": "PhysioNet big-ideas-glycemic-wearable \u2014 ODC-By open license"
+          "note": "PhysioNet big-ideas-glycemic-wearable — ODC-By open license"
         }
       ],
-      "provenance": "PhysioNet \u00b7 ODC-By open license",
+      "provenance": "PhysioNet · ODC-By open license",
       "deed_backed": false,
       "license": "ODC-By (Open Data Commons Attribution)",
       "status": "open-source",
